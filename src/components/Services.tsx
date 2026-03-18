@@ -1,27 +1,27 @@
 import { Factory, DraftingCompass, Building2, ShieldCheck, ArrowUpRight } from "lucide-react"
 
 const steelServices = [
-  { 
-    title: "Tư vấn & Thiết kế", 
-    icon: <DraftingCompass size={32} />, 
+  {
+    title: "Tư vấn & Thiết kế",
+    icon: <DraftingCompass size={32} />,
     desc: "Tính toán kết cấu tối ưu bằng phần mềm chuyên dụng (Tekla, SAP2000), đảm bảo an toàn và tiết kiệm chi phí vật tư.",
     accent: "bg-blue-50 text-blue-700"
   },
-  { 
-    title: "Gia công Sản xuất", 
-    icon: <Factory size={32} />, 
+  {
+    title: "Gia công Sản xuất",
+    icon: <Factory size={32} />,
     desc: "Sản xuất cấu kiện thép tại xưởng với quy trình kiểm soát chất lượng nghiêm ngặt, đạt chuẩn độ bền cao cho mọi môi trường.",
     accent: "bg-amber-50 text-amber-700"
   },
-  { 
-    title: "Lắp dựng Trọn gói", 
-    icon: <Building2 size={32} />, 
+  {
+    title: "Lắp dựng Trọn gói",
+    icon: <Building2 size={32} />,
     desc: "Đội ngũ kỹ sư và công nhân lành nghề triển khai lắp dựng tại công trường nhanh chóng, đảm bảo tuyệt đối an toàn lao động.",
     accent: "bg-green-50 text-green-700"
   },
-  { 
-    title: "Bảo trì & Nâng cấp", 
-    icon: <ShieldCheck size={32} />, 
+  {
+    title: "Bảo trì & Nâng cấp",
+    icon: <ShieldCheck size={32} />,
     desc: "Dịch vụ bảo dưỡng định kỳ và cải tạo nhà xưởng, giúp kéo dài tuổi thọ công trình và tối ưu hóa công năng sử dụng.",
     accent: "bg-red-50 text-red-700"
   },
@@ -31,20 +31,29 @@ export default function Services() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Tiêu đề Section */}
+        {/* Tiêu đề Section - Cập nhật Công ty Cổ Phần Thành Công TTB CORP */}
         <div className="text-center mb-16 space-y-4">
-          <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-xs">Thành Công Group</span>
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px]">
+              Công ty Cổ Phần Thành Công
+            </span>
+            <span className="text-blue-900 font-black uppercase tracking-[0.2em] text-xl">
+              TTB CORP
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter">
             Giải pháp <span className="text-blue-800">Kết cấu thép</span> Toàn diện
           </h2>
-          <div className="w-24 h-1.5 bg-blue-800 mx-auto rounded-full"></div>
+
+          <div className="w-24 h-2 bg-blue-900 mx-auto rounded-full shadow-sm"></div>
         </div>
-        
+
         {/* Lưới dịch vụ */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steelServices.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center"
             >
               {/* Icon với hiệu ứng nền */}
@@ -78,7 +87,7 @@ export default function Services() {
             <p className="text-blue-100 opacity-80 text-sm">Chúng tôi hỗ trợ bóc tách bản vẽ và báo giá sơ bộ trong vòng 24h.</p>
           </div>
           <button className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-xl font-black transition-all flex items-center gap-2 shrink-0">
-             NHẬN BÁO GIÁ NGAY
+            NHẬN BÁO GIÁ NGAY
           </button>
         </div>
       </div>

@@ -12,8 +12,10 @@ export default function Hero() {
             Vững Nền Tảng <br />
             <span className="text-blue-700 font-outline-2">Sáng Tương Lai</span>
           </h1>
-          <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
-            Thành Công Group (TTC) - Đơn vị hàng đầu về tư vấn, thiết kế và thi công hệ sinh thái công nghiệp trọn gói. 
+          <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed font-medium">
+            <span className="text-blue-900 font-bold italic">Công ty Cổ Phần Thành Công TTB CORP</span>
+            <br />
+            Đơn vị hàng đầu về tư vấn, thiết kế và thi công hệ sinh thái kết cấu thép & hạ tầng công nghiệp trọn gói.
           </p>
           <div className="flex flex-wrap gap-4">
             <button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-900/30 transition-all flex items-center gap-2">
@@ -24,12 +26,12 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        
+
         <div className="order-1 lg:order-2 relative">
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
-            <img 
-              src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1000" 
-              alt="Steel Structure" 
+            <img
+              src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1000"
+              alt="Steel Structure"
               className="w-full object-cover aspect-[4/3]"
             />
           </div>

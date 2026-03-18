@@ -5,25 +5,29 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
-
         <Link to="/" className="flex items-center gap-3 no-underline group">
-          {/* Logo Image */}
+          {/* Logo Image - Giữ nguyên hiệu ứng hover */}
           <div className="h-12 w-12 overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105">
             <img
               src="/ttb-white.jpg"
-              alt="Thành Công Group Logo"
+              alt="TTB CORP Logo"
               className="h-full w-full object-contain mix-blend-multiply"
             />
           </div>
 
-          {/* Brand Name */}
-          <div className="flex flex-col leading-tight">
+          {/* Brand Name - Đổi tên thành Công ty Cổ Phần Thành Công TTB CORP */}
+          <div className="flex flex-col leading-none border-l-2 border-slate-200 pl-3">
             <span className="text-blue-900 font-black text-xl tracking-tighter uppercase">
               Thành Công
             </span>
-            <span className="text-slate-400 text-[10px] font-bold tracking-[0.25em] uppercase">
-              Group
-            </span>
+            <div className="flex flex-col mt-1">
+              <span className="text-blue-600 text-[11px] font-black tracking-[0.2em] uppercase">
+                TTB CORP
+              </span>
+              <span className="text-slate-400 text-[8px] font-bold uppercase tracking-wider mt-0.5 hidden sm:block">
+                Công ty Cổ Phần
+              </span>
+            </div>
           </div>
         </Link>
 

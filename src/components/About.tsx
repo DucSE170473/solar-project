@@ -12,13 +12,22 @@ export default function About() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mt-2 group-hover:text-blue-200 transition-colors">Dự án hoàn thành</p>
           </div>
         </div>
-        
+
         <div className="space-y-6">
-          <span className="text-blue-700 font-bold uppercase tracking-[0.3em] text-xs">Về Thành Công Group</span>
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Uy tín khẳng định qua <br/> chất lượng công trình</h2>
-          <p className="text-slate-600 text-lg leading-relaxed">
-            Chúng tôi không chỉ thi công, chúng tôi cung cấp giải pháp. Với đội ngũ kỹ sư tâm huyết, Thành Công Group cam kết tối ưu hóa chi phí và tiến độ cho mọi khách hàng.
+          <span className="text-blue-700 font-bold uppercase tracking-[0.3em] text-xs">
+            Về TTB-CORP
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+            Uy tín khẳng định qua <br /> chất lượng công trình
+          </h2>
+          <p className="text-slate-700 text-lg font-bold leading-relaxed">
+            Công ty Cổ Phần Thành Công TTB CORP
           </p>
+          <p className="text-slate-600 leading-relaxed">
+            Chúng tôi không chỉ thi công, chúng tôi cung cấp giải pháp. Với đội ngũ kỹ sư tâm huyết, TTB CORP cam kết tối ưu hóa chi phí và tiến độ cho mọi khách hàng.
+          </p>
+
+          {/* Các đặc điểm nổi bật bên dưới */}
           <div className="grid gap-4 pt-4">
             {['Quy trình sản xuất chuẩn ISO', 'Đảm bảo tuyệt đối tiến độ thi công', 'Hệ thống thiết bị hiện đại'].map((item) => (
               <div key={item} className="flex items-center gap-3 font-bold text-slate-800">

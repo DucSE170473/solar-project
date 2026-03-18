@@ -10,37 +10,39 @@ export default function Footer() {
 
         {/* Cột 1: Thương hiệu */}
         <div className="col-span-1 md:col-span-1 space-y-6">
-          <div className="flex flex-col gap-4">
-            {/* Phần Logo Ảnh */}
-            <div className="h-16 w-auto overflow-hidden">
+          <div className="flex flex-col gap-5">
+            {/* Logo */}
+            <div className="h-14 w-auto overflow-hidden">
               <img
                 src="/ttb-white.jpg"
-                alt="Thành Công Group Logo Footer"
-                className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                alt="TTB CORP Logo"
+                className="h-full w-auto object-contain transition-opacity hover:opacity-80"
               />
-             
             </div>
 
-            {/* Tên thương hiệu bên dưới Logo */}
-            <div className="flex flex-col leading-none border-l-2 border-blue-600 pl-3">
-              <span className="text-white font-black text-2xl tracking-tighter uppercase">
+            {/* Tên thương hiệu pháp lý */}
+            <div className="flex flex-col leading-tight border-l-4 border-blue-600 pl-4">
+              <span className="text-white font-black text-xl tracking-tighter uppercase leading-none">
                 Thành Công
               </span>
-              <span className="text-blue-500 text-[10px] font-bold tracking-[0.3em] uppercase mt-1">
-                Group
+              <span className="text-blue-500 text-xs font-black tracking-[0.2em] uppercase mt-1">
+                TTB CORP
               </span>
+              <p className="text-[10px] text-slate-500 font-bold uppercase mt-2 tracking-wider">
+                Công ty Cổ Phần Thành Công
+              </p>
             </div>
           </div>
 
-          <p className="text-sm leading-relaxed text-slate-400">
-            Chuyên gia hàng đầu trong lĩnh vực kết cấu thép, hệ thống PCCC và giải pháp năng lượng tái tạo tại Việt Nam.
+          <p className="text-sm leading-relaxed text-slate-400 font-medium">
+            Chuyên gia hàng đầu trong lĩnh vực tư vấn, thiết kế và thi công kết cấu thép nhà xưởng đạt chuẩn quốc tế.
           </p>
 
           <div className="flex gap-4">
-            <a href="#" className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-blue-500 hover:bg-slate-700 transition-all">
+            <a href="#" className="p-2.5 rounded-xl bg-slate-800 text-slate-400 hover:text-blue-400 hover:bg-slate-700 transition-all">
               <Facebook size={20} />
             </a>
-            <a href="#" className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-red-500 hover:bg-slate-700 transition-all">
+            <a href="#" className="p-2.5 rounded-xl bg-slate-800 text-slate-400 hover:text-red-500 hover:bg-slate-700 transition-all">
               <Youtube size={20} />
             </a>
           </div>
