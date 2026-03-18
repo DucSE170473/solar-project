@@ -1,38 +1,40 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ShieldCheck } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-      <div className="page-wrap grid lg:grid-cols-2 gap-12 items-center z-10">
-        <div className="rise-in">
-          <span className="island-kicker mb-4 inline-block text-lagoon">
-            Giải pháp thép tiền chế số 1
-          </span>
-          <h1 className="display-title text-5xl lg:text-7xl mb-6 leading-tight">
-            Vững nền tảng <br />
-            <span className="text-lagoon">Sáng tương lai</span>
+    <section className="relative min-h-[80vh] flex items-center bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="order-2 lg:order-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-6">
+            <ShieldCheck size={14} /> Chuyên gia kết cấu thép & PCCC
+          </div>
+          <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-6 leading-[1.1]">
+            Vững Nền Tảng <br />
+            <span className="text-blue-700 font-outline-2">Sáng Tương Lai</span>
           </h1>
-          <p className="text-lg text-sea-ink-soft mb-10 max-w-lg">
-            TTB-Corp chuyên tư vấn, thiết kế và thi công kết cấu thép nhà xưởng đạt chuẩn quốc tế. Chúng tôi đồng hành cùng sự phát triển của doanh nghiệp bạn.
+          <p className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+            Thành Công Group (TTC) - Đơn vị hàng đầu về tư vấn, thiết kế và thi công hệ sinh thái công nghiệp trọn gói. 
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-lagoon hover:bg-lagoon-deep text-white px-8 py-4 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2">
-              Bắt đầu dự án <ArrowRight size={20} />
+            <button className="bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-blue-900/30 transition-all flex items-center gap-2">
+              Khởi tạo dự án <ArrowRight size={20} />
             </button>
-            <button className="island-shell px-8 py-4 rounded-xl font-bold text-sea-ink">
-              Tìm hiểu thêm
+            <button className="bg-white border border-slate-200 px-8 py-4 rounded-xl font-bold text-slate-900 hover:bg-slate-50 transition-all">
+              Hồ sơ năng lực
             </button>
           </div>
         </div>
         
-        <div className="relative hidden lg:block rise-in" style={{ animationDelay: '200ms' }}>
-          <div className="island-shell p-4 rotate-2 transform transition hover:rotate-0 duration-500">
+        <div className="order-1 lg:order-2 relative">
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
             <img 
               src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1000" 
               alt="Steel Structure" 
-              className="rounded-lg shadow-2xl"
+              className="w-full object-cover aspect-[4/3]"
             />
           </div>
+          {/* Trang trí phía sau ảnh */}
+          <div className="absolute -bottom-6 -right-6 h-64 w-64 bg-blue-100 rounded-full -z-10 blur-3xl opacity-60"></div>
         </div>
       </div>
     </section>
