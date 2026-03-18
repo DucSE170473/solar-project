@@ -5,8 +5,13 @@ export default function Hero() {
     <section className="relative min-h-[80vh] flex items-center bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div className="order-2 lg:order-1">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-6">
-            <ShieldCheck size={14} /> Chuyên gia kết cấu thép & PCCC
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-[10px] font-black uppercase tracking-[0.2em] mb-8 shadow-sm">
+            <div className="flex items-center justify-center w-4 h-4 bg-blue-900 text-white rounded-full">
+              <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            Chuyên gia kết cấu thép tiền chế
           </div>
           <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-6 leading-[1.1]">
             Vững Nền Tảng <br />
