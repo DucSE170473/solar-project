@@ -70,8 +70,12 @@ export function Projects() {
         <div className="mb-16 flex flex-col items-start justify-between gap-8 border-l-4 border-blue-900 pl-6 md:flex-row md:items-end">
           <div className="space-y-2">
             <span className="text-blue-600 font-bold uppercase tracking-widest text-xs">Hồ sơ năng lực</span>
-            <h2 className="text-4xl font-black text-slate-900 uppercase tracking-tighter leading-none">
-              Dự án <span className="text-blue-900">Kết cấu thép</span> tiêu biểu
+            <h2 className="text-5xl md:text-8xl font-black leading-[0.85] tracking-tighter uppercase">
+              {/* Phần 1: Dòng dẫn dắt mảnh và hiện đại */}
+              <span className="block text-2xl md:text-3xl font-light tracking-[0.3em] text-slate-400 mb-2">
+                Dự án tiêu biểu
+              </span>
+             
             </h2>
             <p className="text-slate-500 font-medium">
               Minh chứng cho chất lượng và tiến độ từ đội ngũ kỹ sư TTB CORP.
@@ -85,8 +89,8 @@ export function Projects() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${filter === cat
-                    ? 'bg-blue-900 text-white shadow-xl shadow-blue-900/20 scale-105'
-                    : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200'
+                  ? 'bg-blue-900 text-white shadow-xl shadow-blue-900/20 scale-105'
+                  : 'bg-white text-slate-500 hover:bg-slate-100 border border-slate-200'
                   }`}
               >
                 {cat}
