@@ -11,51 +11,126 @@ export default function Contact() {
         <section className="py-20 bg-slate-50">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Tiêu đề trang */}
-                <div className="mb-16 text-center space-y-4">
-                    <h1 className="text-4xl font-black text-blue-900 uppercase tracking-tight">Liên hệ với chúng tôi</h1>
-                    <p className="text-slate-500 max-w-2xl mx-auto font-medium">
-                        Sẵn sàng tư vấn giải pháp Kết cấu thép, PCCC và Năng lượng tái tạo tối ưu nhất cho dự án của bạn.
-                    </p>
+                <div className="relative p-10 rounded-3xl overflow-hidden group">
+                    {/* 1. Lớp ảnh nền chìm phía sau (Background Overlay) */}
+                    <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                        <img
+                            src="/public/steel-5.jpg" // Hãy thay bằng đường dẫn ảnh thật của bạn (ví dụ: cận cảnh mối nối thép, bản vẽ kỹ thuật...)
+                            alt="TTB Corp Connection Background"
+                            className="w-full h-full object-cover brightness-75" // grayscale giúp ảnh hòa vào nền, không bị phô
+                        />
+                    </div>
+
+                    {/* 2. Lớp phủ gradient nhẹ để đảm bảo chữ luôn rõ ràng */}
+                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+                    {/* 3. Nội dung chữ (giữ nguyên z-10 để nổi lên trên cùng) */}
+                    <div className="relative z-10 flex flex-col gap-3">
+                        {/* Phần 1: Dòng định danh nhỏ, chuyên nghiệp */}
+                        <div className="flex items-center gap-4">
+                            <div className="h-[1px] w-12 bg-amber-500"></div>
+                            <span className="text-[#3333CC] font-black uppercase tracking-[0.4em] text-[10px]">
+                                Kết nối cùng TTB CORP
+                            </span>
+                        </div>
+
+                        {/* Phần 2: Tiêu đề chính khổng lồ, sắc nét */}
+                        <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase text-slate-900 shadow-sm">
+                            Liên hệ <br />
+                            <span className="relative inline-block text-[#3333CC] mt-2">
+                                với chúng tôi
+                                {/* Hiệu ứng gạch chân dạng khối kỹ thuật */}
+                                <span className="absolute -bottom-2 left-0 w-full h-[6px] bg-[#3333CC]/10"></span>
+                                <span className="absolute -bottom-2 left-0 w-1/4 h-[6px] bg-amber-500"></span>
+                            </span>
+                        </h1>
+
+                        {/* Phần 3: Mô tả ngắn (Optional) */}
+                        <p className="text-slate-400 font-medium text-sm mt-4 max-w-xs uppercase tracking-widest leading-relaxed">
+                            Giải pháp kết cấu thép & PCCC <br /> tiêu chuẩn quốc tế.
+                        </p>
+                    </div>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
 
                     {/* CỘT 1: FORM NHẬN THÔNG BÁO / TƯ VẤN */}
-                    <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100">
-                        <h3 className="text-2xl font-bold text-slate-800 mb-6">Gửi yêu cầu tư vấn</h3>
+                    <div className="bg-white p-8 rounded-[2rem] shadow-2xl shadow-slate-200/60 border border-slate-100">
+                        <h3 className="text-2xl font-black text-slate-900 mb-6 uppercase tracking-tight">
+                            Gửi yêu cầu tư vấn
+                        </h3>
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <div className="grid md:grid-cols-2 gap-5">
+                                {/* Họ và tên */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase text-slate-400 ml-1">Họ và tên</label>
-                                    <input type="text" placeholder="Nguyễn Văn A" className="w-full px-5 py-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-600 outline-none transition-all" required />
+                                    <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">
+                                        Họ và tên
+                                    </label>
+                                    <input
+                                        type="text"
+                                        placeholder="Nguyễn Văn A"
+                                        className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-100 text-black font-semibold focus:bg-white focus:ring-2 focus:ring-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                        required
+                                    />
                                 </div>
+                                {/* Số điện thoại */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase text-slate-400 ml-1">Số điện thoại</label>
-                                    <input type="tel" placeholder="0792..." className="w-full px-5 py-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-600 outline-none transition-all" required />
+                                    <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">
+                                        Số điện thoại
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        placeholder="0792.51.51.51"
+                                        className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-100 text-black font-semibold focus:bg-white focus:ring-2 focus:ring-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                        required
+                                    />
+                                </div>
+                                {/* Email */}
+                                <div className="space-y-2">
+                                    <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        placeholder="nguyenvana@email.com"
+                                        className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-100 text-black font-semibold focus:bg-white focus:ring-2 focus:ring-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                        required
+                                    />
                                 </div>
                             </div>
 
+                            {/* Lời nhắn */}
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase text-slate-400 ml-1">
-                                    Hạng mục kết cấu thép
+                                <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">
+                                    Lời nhắn chi tiết dự án
                                 </label>
-                                <select className="w-full px-5 py-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-900 outline-none transition-all font-medium text-slate-700 cursor-pointer appearance-none">
-                                    <option value="nha-xuong">Thi công Nhà xưởng tiền chế</option>
-                                    <option value="kho-bai">Hệ thống Kho bãi & Logistics</option>
-                                    <option value="showroom">Showroom & Nhà cao tầng hệ thép</option>
-                                    <option value="gia-cong">Gia công cấu kiện thép theo yêu cầu</option>
-                                    <option value="cai-tao">Cải tạo & Nâng cấp khung thép</option>
-                                </select>
+                                <textarea
+                                    rows={4}
+                                    placeholder="Ví dụ: Cần báo giá nhà xưởng 1000m2 tại Bình Dương..."
+                                    className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-100 text-black font-semibold focus:bg-white focus:ring-2 focus:ring-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                ></textarea>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase text-slate-400 ml-1">Lời nhắn chi tiết</label>
-                                <textarea rows={4} placeholder="Mô tả sơ bộ về dự án của bạn..." className="w-full px-5 py-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-blue-600 outline-none transition-all"></textarea>
-                            </div>
+                            <button className="w-full bg-gradient-to-r from-[#3333CC] to-[#4D4DFF] text-white  py-5 
+  rounded-2xl 
+  font-black 
+  flex items-center justify-center gap-3 
+  transition-all duration-500 
+  hover:from-amber-500 hover:to-amber-600 
+  hover:shadow-[0_20px_40px_-15px_rgba(245,158,11,0.5)] 
+  hover:-translate-y-1 
+  active:scale-95
+  group
+">
+                                {/* Chữ được bọc để dễ kiểm soát hiệu ứng hover */}
+                                <span className="relative z-10">GỬI YÊU CẦU TƯ VẤN</span>
 
-                            <button className="w-full bg-blue-900 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/20 uppercase tracking-widest">
-                                Gửi yêu cầu ngay <Send size={18} />
+                                <div className="bg-white/20 p-1.5 rounded-lg group-hover:bg-white/40 transition-colors">
+                                    <Send
+                                        size={18}
+                                        className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                                    />
+                                </div>
                             </button>
                         </form>
                     </div>
