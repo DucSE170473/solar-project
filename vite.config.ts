@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import tailwindcss from '@tailwindcss/vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { resolve } from 'path' // Thêm dòng này
 
 export default defineConfig({
-  // Nếu file index.html nằm ở thư mục gốc, giữ nguyên. 
-  // Nếu nó nằm trong thư mục khác, ví dụ 'src', hãy thêm: root: 'src',
+  root: process.cwd(), // Đảm bảo lấy thư mục gốc hiện tại
   plugins: [
     TanStackRouterVite(),
     react(),
@@ -16,5 +16,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: resolve(__dirname, 'index.html'), // Chỉ định chính xác file đầu vào
+    },
   }
 })
