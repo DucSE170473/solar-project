@@ -7,11 +7,11 @@
     "#/*": "./src/*"
   },
   "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run"
-  },
+  "dev": "vite dev --port 3000",
+  "build": "vite build --outDir dist", 
+  "preview": "vite preview",
+  "test": "vitest run"
+},
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",
