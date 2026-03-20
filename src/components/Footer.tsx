@@ -54,9 +54,9 @@ export default function Footer() {
             <h4 className="text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800 lg:border-none pb-2 lg:pb-0">Liên kết</h4>
             <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2 text-sm">
               <li><Link to="/" className="hover:text-white hover:translate-x-1 inline-block transition">Trang chủ</Link></li>
-              <li><Link to="/" className="hover:text-white hover:translate-x-1 inline-block transition">Về chúng tôi</Link></li>
-              <li><Link to="/" className="hover:text-white hover:translate-x-1 inline-block transition">Dự án</Link></li>
-              <li><Link to="/" className="hover:text-white hover:translate-x-1 inline-block transition">Liên hệ</Link></li>
+              <li><Link to="/about" className="hover:text-white hover:translate-x-1 inline-block transition">Về chúng tôi</Link></li>
+              <li><Link to="/projects" className="hover:text-white hover:translate-x-1 inline-block transition">Dự án</Link></li>
+              <li><Link to="/contact" className="hover:text-white hover:translate-x-1 inline-block transition">Liên hệ</Link></li>
             </ul>
           </div>
 

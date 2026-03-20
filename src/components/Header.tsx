@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
-import { Menu, X, Phone } from 'lucide-react' // Thêm icon từ lucide
+import { Menu, X, Phone, ArrowRight } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -64,6 +64,13 @@ export default function Header() {
           >
             <Phone size={14} /> 0792.51.51.51
           </a>
+
+          {/* Nút Báo Giá */}
+          <Link to="/contact" className="bg-white text-[#1e3a8a] px-4 md:px-6 py-2.5 rounded-xl font-bold hover:bg-amber-500 hover:text-white transition-all flex items-center gap-2 group shadow-lg text-[11px] md:text-sm no-underline">
+            <span className="hidden sm:inline uppercase tracking-widest">BÁO GIÁ</span>
+            <span className="sm:hidden uppercase font-black">Tư vấn</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
 
           {/* Toggle Menu Mobile */}
           <button

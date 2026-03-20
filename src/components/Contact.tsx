@@ -36,7 +36,7 @@ export default function Contact() {
                 <div className="relative p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] overflow-hidden group mb-12 shadow-xl">
                     <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
                         <img
-                            src="/public/steel-5.jpg" 
+                            src="/steel-5.jpg" 
                             alt="TTB Corp Background"
                             className="w-full h-full object-cover brightness-50"
                         />

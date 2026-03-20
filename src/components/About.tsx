@@ -56,7 +56,7 @@ export default function About() {
             </p>
             
             <p className="text-slate-600 leading-relaxed text-base md:text-lg">
-              Xây dựng khung thép vững chãi và **niềm tin tuyệt đối** cho đối tác thông qua giải pháp tối ưu công năng.
+              Xây dựng khung thép vững chãi và <strong>niềm tin tuyệt đối</strong> cho đối tác thông qua giải pháp tối ưu công năng.
             </p>
           </div>
 
