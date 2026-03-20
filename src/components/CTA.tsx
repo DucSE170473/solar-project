@@ -1,58 +1,68 @@
 import { ArrowRight, Phone } from "lucide-react"
+import { useState } from "react"
 
 export default function CTA() {
-  return (
-    <section className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="relative overflow-hidden rounded-[3rem] bg-[#3333CC] shadow-2xl group transition-all duration-500 hover:shadow-[0_40px_80px_-15px_rgba(51,51,204,0.4)]">
+  const [imgError, setImgError] = useState(false);
 
-          {/* Lớp ảnh nền thực tế - Lấy từ public/steel-cta-bg.jpg */}
+  return (
+    <section className="py-12 md:py-24 bg-slate-50 transition-all duration-500">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-[#1e3a8a] shadow-2xl group transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(30,58,138,0.4)]">
+
+          {/* Lớp ảnh nền thực tế & Xử lý lỗi ảnh */}
           <div className="absolute inset-0 z-0">
-            <img
-              src="/steel-cta-bg.jpg"
-              alt="TTB Corp Industrial Project"
-              className="w-full h-full object-cover opacity-40 mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-1000 blur-[0.5px] group-hover:blur-0"
-            />
-            {/* Lớp phủ Gradient thông minh để làm nổi bật nội dung phía trái */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#3333CC] via-[#3333CC]/70 to-transparent"></div>
+            {!imgError ? (
+              <img
+                src="/steel-cta-bg.jpg" // Đảm bảo file này ở thư mục public/
+                alt="TTB Corp Industrial Project"
+                onError={() => setImgError(true)}
+                className="w-full h-full object-cover opacity-30 mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[2000ms] blur-[0.3px] group-hover:blur-0"
+              />
+            ) : (
+              // Fallback khi ảnh lỗi: Gradient nghệ thuật theo tone màu thương hiệu
+              <div className="w-full h-full bg-gradient-to-br from-[#1e3a8a] via-[#3333CC] to-[#1e40af] opacity-50" />
+            )}
+            
+            {/* Lớp phủ Gradient thông minh - Tối ưu cho cả Mobile và Desktop */}
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#1e3a8a] via-[#1e3a8a]/90 md:via-[#1e3a8a]/70 to-transparent"></div>
           </div>
 
-          <div className="relative z-10 px-8 py-20 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="relative z-10 px-6 py-12 md:px-20 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12">
 
-            {/* Khối Tiêu đề & Nội dung */}
-            <div className="max-w-2xl text-center lg:text-left space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
+            {/* Khối Tiêu đề & Nội dung - Căn giữa trên Mobile */}
+            <div className="max-w-2xl text-center lg:text-left space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                 </span>
-                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-white">
                   Tư vấn khảo sát miễn phí 24/7
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-6xl font-black leading-[0.9] text-white uppercase tracking-tighter">
-                <span className="block text-2xl md:text-3xl font-light tracking-[0.2em] text-blue-200 mb-4 opacity-80">
+              <h2 className="text-3xl md:text-6xl font-black leading-[1.1] md:leading-[0.9] text-white uppercase tracking-tighter">
+                <span className="block text-lg md:text-3xl font-light tracking-[0.1em] md:tracking-[0.2em] text-blue-200 mb-2 md:mb-4 opacity-80">
                   Bắt đầu ngay
                 </span>
-                Dự án công nghiệp <br />
-                <span className="text-amber-400 drop-shadow-md">của bạn hôm nay</span>
+                Dự án công nghiệp <br className="hidden md:block" />
+                <span className="text-amber-400 drop-shadow-2xl">của bạn hôm nay</span>
               </h2>
 
-              <p className="text-blue-50 text-lg font-medium max-w-xl opacity-90 leading-relaxed italic border-l-4 border-amber-500 pl-6 hidden md:block shadow-sm">
+              <p className="text-blue-50 text-base md:text-lg font-medium max-w-xl opacity-90 leading-relaxed italic border-l-4 border-amber-500 pl-4 md:pl-6 mx-auto lg:mx-0 w-fit text-left">
                 "TTB CORP cam kết mang lại giải pháp kết cấu thép tối ưu về chi phí và bền bỉ cùng thời gian."
               </p>
             </div>
 
-            {/* Khối Nút hành động */}
-            <div className="flex flex-col w-full sm:w-auto gap-4 shrink-0">
+            {/* Khối Nút hành động - Xếp chồng trên Mobile */}
+            <div className="flex flex-col w-full sm:w-auto gap-4 shrink-0 relative z-20">
               {/* Nút Gọi ngay */}
               <a
                 href="tel:0792515151"
-                className="group/btn bg-white text-[#3333CC] px-10 py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-amber-500 hover:text-white transition-all duration-300 shadow-2xl hover:-translate-y-1 uppercase text-sm tracking-tighter"
+                className="group/btn bg-white text-[#1e3a8a] px-8 md:px-10 py-5 md:py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-amber-500 hover:text-white transition-all duration-300 shadow-xl hover:-translate-y-1 uppercase text-sm"
               >
-                <div className="bg-[#3333CC] group-hover/btn:bg-white p-2 rounded-full transition-colors">
-                  <Phone size={20} className="text-white group-hover/btn:text-amber-500 transition-colors" />
+                <div className="bg-[#1e3a8a] group-hover/btn:bg-white p-2 rounded-full transition-colors animate-pulse group-hover/btn:animate-none">
+                  <Phone size={18} className="text-white group-hover/btn:text-amber-500 transition-colors" />
                 </div>
                 0792.51.51.51
               </a>
@@ -60,17 +70,17 @@ export default function CTA() {
               {/* Nút Chuyển trang Contact */}
               <a
                 href="/contact"
-                className="group/btn2 bg-transparent text-white border-2 border-white/30 px-10 py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-white/10 hover:border-white transition-all duration-300 uppercase text-sm tracking-tighter"
+                className="group/btn2 bg-transparent text-white border-2 border-white/30 px-8 md:px-10 py-5 md:py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-white/10 hover:border-white transition-all duration-300 uppercase text-sm overflow-hidden relative"
               >
-                Gửi yêu cầu thiết kế
-                <ArrowRight size={22} className="group-hover/btn2:translate-x-2 transition-transform text-amber-500" />
+                <span className="relative z-10">Gửi yêu cầu thiết kế</span>
+                <ArrowRight size={20} className="relative z-10 group-hover/btn2:translate-x-2 transition-transform text-amber-500" />
               </a>
             </div>
 
           </div>
 
-          {/* Họa tiết TTB Branding chìm */}
-          <div className="absolute bottom-[-15%] right-[-5%] text-[15rem] font-black text-white/5 pointer-events-none select-none italic tracking-tighter">
+          {/* Họa tiết TTB Branding chìm - Ẩn trên Mobile để không làm rối chữ */}
+          <div className="absolute bottom-[-10%] right-[-2%] text-[10rem] md:text-[18rem] font-black text-white/5 pointer-events-none select-none italic tracking-tighter leading-none hidden md:block">
             TTB
           </div>
         </div>
