@@ -46,10 +46,6 @@ export default function Hero() {
 
           {/* Button Group - Xếp chồng trên mobile cực nhỏ */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 md:gap-5 pt-4">
-            <button className="bg-[#3333CC] hover:bg-amber-600 text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black shadow-xl shadow-[#3333CC]/20 transition-all flex items-center justify-center gap-3 group active:scale-95 uppercase text-xs md:text-sm tracking-tighter">
-              Nhận báo giá ngay 
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
             
             <a
               href="/PROFILE TTB - Thanh Cong TTB Joint Stock Company.pdf"

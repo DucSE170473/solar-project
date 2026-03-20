@@ -133,15 +133,6 @@ export function Projects() {
                     </div>
                     <span className="line-clamp-1">{item.location}</span>
                   </div>
-
-                  <button className="group/btn flex items-center justify-center sm:justify-end gap-2 text-[10px] font-black text-blue-900 uppercase tracking-[0.2em] hover:text-amber-600 transition-colors py-2 md:py-0">
-                    Chi tiết
-                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover/btn:bg-amber-100 transition-colors">
-                       <svg className="h-3 w-3 transition-transform group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </button>
                 </div>
               </div>
             </div>
