@@ -6,7 +6,7 @@ const projectData = [
     name: 'Nhà Máy Sản Xuất Linh Kiện TTB-01',
     type: 'Nhà xưởng tiền chế',
     location: 'KCN Sóng Thần, Bình Dương',
-    img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800',
+    img: '/img-factory.jpg',
     size: '5.000m2'
   },
   {
@@ -14,7 +14,7 @@ const projectData = [
     name: 'Trung Tâm Logistics & Kho Vận Thông Minh',
     type: 'Kho bãi & Logistics',
     location: 'Bến Lức, Long An',
-    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800',
+    img: '/img-logistics.jpg',
     size: '12.000m2'
   },
   {
@@ -22,7 +22,7 @@ const projectData = [
     name: 'Showroom Ô Tô & Trưng Bày Hệ Thép',
     type: 'Showroom & Dân dụng',
     location: 'Quận 7, TP. HCM',
-    img: 'https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=800',
+    img: '/img-showroom.jpg',
     size: '3.000m2'
   },
   {
@@ -30,7 +30,7 @@ const projectData = [
     name: 'Tổ Hợp Nhà Xưởng Cho Thuê TTB-Central',
     type: 'Nhà xưởng tiền chế',
     location: 'KCN VSIP II, Bình Dương',
-    img: 'https://images.unsplash.com/photo-1565034946487-077786996e27?q=80&w=800',
+    img: '/img-workshop.jpg',
     size: '8.500m2'
   },
   {
@@ -38,7 +38,7 @@ const projectData = [
     name: 'Cầu Trục & Kết Cấu Thép Hạng Nặng',
     type: 'Gia công cấu kiện',
     location: 'Nhà máy TTB CORP, TP. HCM',
-    img: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800',
+    img: '/img-crane.jpg',
     size: 'Theo thiết kế'
   },
   {
@@ -46,7 +46,7 @@ const projectData = [
     name: 'Mái Che Sân Vận Động Nhịp Lớn',
     type: 'Showroom & Dân dụng',
     location: 'TP. Thủ Đức, TP. HCM',
-    img: 'https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=800',
+    img: '/img-stadium.jpg',
     size: '4.200m2'
   },
 ]

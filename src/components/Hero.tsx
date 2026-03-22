@@ -1,4 +1,5 @@
 import { Download, Zap } from "lucide-react"
+import { Link } from "@tanstack/react-router"
 
 export default function Hero() {
   return (
@@ -46,7 +47,14 @@ export default function Hero() {
 
           {/* Button Group - Xếp chồng trên mobile cực nhỏ */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 md:gap-5 pt-4">
-            
+            <Link
+              to="/contact"
+              className="bg-[var(--brand-primary)] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black hover:bg-[var(--brand-primary)]/90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-[var(--brand-primary)]/20 hover:-translate-y-1 active:scale-95 uppercase text-xs md:text-sm tracking-widest"
+            >
+              Liên hệ tư vấn
+              <Zap size={18} fill="currentColor" />
+            </Link>
+
             <a
               href="/PROFILE TTB - Thanh Cong TTB Joint Stock Company.pdf"
               target="_blank"
@@ -62,14 +70,14 @@ export default function Hero() {
         <div className="order-1 lg:order-2 relative px-4 md:px-0">
           <div className="relative z-10 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] md:border-[12px] border-white group">
             <img
-              src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1000"
+              src="/img-hero-steel.jpg"
               alt="Steel Structure"
               className="w-full object-cover aspect-[4/3] md:aspect-[4/5] group-hover:scale-105 transition-transform duration-1000"
             />
           </div>
 
-          {/* Badge ISO - Hiển thị tinh tế hơn trên mobile */}
-          <div className="absolute -bottom-4 -left-2 md:-bottom-8 md:-left-8 z-20 bg-white p-4 md:p-8 rounded-2xl md:rounded-[2rem] shadow-xl border border-slate-100 animate-bounce-slow scale-75 md:scale-100">
+          {/* Badge ISO - Định vị trong ảnh, không tràn ra ngoài */}
+          <div className="absolute bottom-4 -left-2 md:bottom-6 md:-left-8 z-20 bg-white p-4 md:p-6 rounded-2xl md:rounded-[2rem] shadow-xl border border-slate-100 animate-bounce-slow scale-75 md:scale-100">
             <div className="flex items-center gap-3 md:gap-4">
               <div className="w-10 h-10 md:w-14 md:h-14 bg-amber-100 text-amber-600 rounded-xl md:rounded-2xl flex items-center justify-center">
                 <Zap className="w-5 h-5 md:w-7 md:h-7" fill="currentColor" />

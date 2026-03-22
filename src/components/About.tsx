@@ -13,7 +13,7 @@ export default function About() {
           {/* Ảnh 1: Nhà máy */}
           <div className="relative z-10 w-full md:w-4/5 aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 md:border-8 border-white">
             <img 
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" 
+              src="/img-factory.jpg" 
               alt="Nhà máy kết cấu thép TTB" 
               className="w-full h-full object-cover"
             />
@@ -22,7 +22,7 @@ export default function About() {
           {/* Ảnh 2: Công trình - Chỉnh lại vị trí để không bị lấp mất trên mobile */}
           <div className="absolute -bottom-6 -right-2 md:-bottom-10 md:-right-4 z-20 w-1/2 md:w-3/5 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 md:border-8 border-white">
             <img 
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800" 
+              src="/img-project-site.jpg" 
               alt="Dự án thực tế TTB CORP" 
               className="w-full h-full object-cover"
             />

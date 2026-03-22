@@ -1,4 +1,5 @@
 import { Factory, DraftingCompass, Building2, ShieldCheck, ArrowUpRight } from "lucide-react"
+import { Link } from "@tanstack/react-router"
 
 const steelServices = [
   {
@@ -89,18 +90,27 @@ export default function Services() {
               </div>
 
               {/* Icon - Scale nhỏ hơn trên mobile */}
-              <div className={`relative z-10 w-14 h-14 md:w-16 md:h-16 ${item.accent} rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:rotate-[360deg] transition-all duration-[800ms]`}>
+              <div className={`relative z-10 w-14 h-14 md:w-16 md:h-16 ${item.accent} rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-sm group-hover:rotate-[12deg] transition-all duration-[800ms]`}>
                 {item.icon}
               </div>
 
               {/* Nội dung text */}
-              <div className="relative z-10">
+              <div className="relative z-10 w-full">
                 <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 text-[var(--brand-primary)] leading-tight">
                   {item.title}
                 </h3>
                 <p className="text-sm text-slate-700 font-bold leading-relaxed mb-4 md:mb-8 opacity-90">
                   {item.desc}
                 </p>
+
+                {/* Link xem chi tiết - Mới thêm cho Stage 3 */}
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-[var(--brand-primary)] font-black text-xs uppercase tracking-widest hover:text-[var(--brand-accent)] transition-colors group/link"
+                >
+                  Xem chi tiết
+                  <ArrowUpRight size={16} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                </Link>
               </div>
 
               {/* Viền chạy khi hover */}
@@ -113,7 +123,7 @@ export default function Services() {
         <div className="mt-16 md:mt-24 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group">
           <div className="absolute inset-0 bg-[var(--brand-primary)]">
             <img
-              src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=1200"
+              src="/img-showroom.jpg"
               className="w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-[3s]"
               alt="Steel Construction"
             />
