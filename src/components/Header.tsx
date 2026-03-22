@@ -65,12 +65,12 @@ export default function Header() {
             <Phone size={14} /> 0792.51.51.51
           </a>
 
-          {/* Nút Báo Giá */}
+          {/* Nút Báo Giá
           <Link to="/contact" className="bg-white text-[var(--brand-primary)] px-4 md:px-6 py-2.5 rounded-xl font-bold hover:bg-[var(--brand-accent)] hover:text-white transition-all flex items-center gap-2 group shadow-lg text-[11px] md:text-sm no-underline">
             <span className="hidden sm:inline uppercase tracking-widest">BÁO GIÁ</span>
             <span className="sm:hidden uppercase font-black">Tư vấn</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </Link> */}
 
           {/* Toggle Menu Mobile */}
           <button

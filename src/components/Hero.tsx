@@ -4,19 +4,19 @@ import { Link } from "@tanstack/react-router"
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-white overflow-hidden pt-20 md:pt-0">
-      
+
       {/* Lớp ảnh nền đại cảnh */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/hero-steel-bg.jpg" 
+        <img
+          src="/hero-steel-bg.jpg"
           alt="TTB Corp Industrial Foundation"
-          className="w-full h-full object-cover opacity-[0.05] grayscale" 
+          className="w-full h-full object-cover opacity-[0.05] grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
-        
+
         {/* Khối nội dung bên trái - Tối ưu Typography Mobile */}
         <div className="order-2 lg:order-1 space-y-6 md:space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 rounded-full bg-[var(--brand-primary)]/5 border border-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-sm backdrop-blur-sm mx-auto lg:mx-0">
@@ -42,7 +42,9 @@ export default function Hero() {
           <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed font-medium border-l-0 lg:border-l-4 border-[var(--brand-primary)]/20 pl-0 lg:pl-6 mx-auto lg:mx-0">
             <span className="text-[var(--brand-primary)] font-black italic uppercase tracking-wider">TTB CORP</span>
             <br className="hidden md:block" />
-            Hệ sinh thái hạ tầng công nghiệp trọn gói: Tư vấn tối ưu - Thiết kế chính xác - Thi công thần tốc.
+            Hệ sinh thái hạ tầng công nghiệp trọn gói:
+            <br className="hidden md:block" />
+            Tư vấn tối ưu - Thiết kế chính xác - Thi công thần tốc.
           </p>
 
           {/* Button Group - Xếp chồng trên mobile cực nhỏ */}
@@ -93,7 +95,7 @@ export default function Hero() {
           <div className="absolute -top-10 -right-10 h-40 md:h-80 w-40 md:w-80 bg-[var(--brand-primary)]/10 rounded-full -z-10 blur-[50px] md:blur-[80px]"></div>
         </div>
       </div>
-      
+
       {/* Text chạy chìm khổng lồ - Ẩn trên Mobile để tránh lỗi layout */}
       <div className="absolute bottom-[-5%] left-[-2%] text-[10rem] lg:text-[20rem] font-black text-slate-50 pointer-events-none select-none italic tracking-tighter opacity-40 hidden md:block">
         TTB CORP
