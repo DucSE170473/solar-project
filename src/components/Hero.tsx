@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Zap } from "lucide-react"
+import { Download, Zap } from "lucide-react"
 
 export default function Hero() {
   return (
@@ -18,10 +18,10 @@ export default function Hero() {
         
         {/* Khối nội dung bên trái - Tối ưu Typography Mobile */}
         <div className="order-2 lg:order-1 space-y-6 md:space-y-8 text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 rounded-full bg-[#3333CC]/5 border border-[#3333CC]/10 text-[#3333CC] text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-sm backdrop-blur-sm mx-auto lg:mx-0">
+          <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 rounded-full bg-[var(--brand-primary)]/5 border border-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-sm backdrop-blur-sm mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3333CC] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3333CC]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-primary)] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--brand-primary)]"></span>
             </span>
             Chuyên gia kết cấu thép & PCCC
           </div>
@@ -30,16 +30,16 @@ export default function Hero() {
             <span className="block text-base md:text-2xl lg:text-3xl font-light tracking-[0.2em] md:tracking-[0.3em] text-slate-400 mb-2 md:mb-4">
               Vững nền tảng
             </span>
-            <span className="relative inline-block text-[#3333CC]">
+            <span className="relative inline-block text-[var(--brand-primary)]">
               Sáng tương lai
               {/* Gạch chân kỹ thuật - Thu nhỏ trên mobile */}
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-2 md:h-3 bg-[#3333CC]/10 rounded-full"></span>
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-1/3 h-2 md:h-3 bg-amber-500 rounded-full"></span>
+              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-2 md:h-3 bg-[var(--brand-primary)]/10 rounded-full"></span>
+              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-1/3 h-2 md:h-3 bg-[var(--brand-accent)] rounded-full"></span>
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed font-medium border-l-0 lg:border-l-4 border-[#3333CC]/20 pl-0 lg:pl-6 mx-auto lg:mx-0">
-            <span className="text-[#3333CC] font-black italic uppercase tracking-wider">TTB CORP</span>
+          <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed font-medium border-l-0 lg:border-l-4 border-[var(--brand-primary)]/20 pl-0 lg:pl-6 mx-auto lg:mx-0">
+            <span className="text-[var(--brand-primary)] font-black italic uppercase tracking-wider">TTB CORP</span>
             <br className="hidden md:block" />
             Hệ sinh thái hạ tầng công nghiệp trọn gói: Tư vấn tối ưu - Thiết kế chính xác - Thi công thần tốc.
           </p>
@@ -50,7 +50,7 @@ export default function Hero() {
             <a
               href="/PROFILE TTB - Thanh Cong TTB Joint Stock Company.pdf"
               target="_blank"
-              className="bg-white border-2 border-slate-200 px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-slate-700 hover:border-[#3333CC] hover:text-[#3333CC] transition-all flex items-center justify-center gap-3 group uppercase text-xs md:text-sm tracking-tighter"
+              className="bg-white border-2 border-slate-200 px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-slate-700 hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-all flex items-center justify-center gap-3 group uppercase text-xs md:text-sm tracking-tighter"
             >
               <Download size={20} className="group-hover:translate-y-1 transition-transform" />
               Hồ sơ năng lực
@@ -76,13 +76,13 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Tiêu chuẩn</p>
-                <p className="text-lg md:text-2xl font-black text-[#3333CC]">ISO 9001</p>
+                <p className="text-lg md:text-2xl font-black text-[var(--brand-primary)]">ISO 9001</p>
               </div>
             </div>
           </div>
 
           {/* Blur Orbs - Ẩn bớt trên mobile để mượt máy */}
-          <div className="absolute -top-10 -right-10 h-40 md:h-80 w-40 md:w-80 bg-[#3333CC]/10 rounded-full -z-10 blur-[50px] md:blur-[80px]"></div>
+          <div className="absolute -top-10 -right-10 h-40 md:h-80 w-40 md:w-80 bg-[var(--brand-primary)]/10 rounded-full -z-10 blur-[50px] md:blur-[80px]"></div>
         </div>
       </div>
       

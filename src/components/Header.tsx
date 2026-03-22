@@ -20,12 +20,12 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-[100] border-b border-white/10 bg-[#1e3a8a] shadow-2xl">
+    <header className="sticky top-0 z-[100] border-b border-white/10 bg-[var(--brand-primary)] shadow-2xl">
       <nav className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6">
 
-        {/* 1. Logo Section - Giữ nguyên như cũ */}
+        {/* 1. Logo Section - Cải thiện hiển thị logo nền trắng */}
         <Link to="/" className="flex items-center gap-2 md:gap-3 no-underline group z-[110]">
-          <div className="h-10 md:h-12 w-auto overflow-hidden">
+          <div className="bg-white p-1 rounded-lg shadow-sm group-hover:shadow-md transition-all h-10 md:h-12 flex items-center justify-center overflow-hidden mix-blend-multiply">
             <img
               src="/ttb-white.jpg"
               alt="TTB CORP Logo"
@@ -33,16 +33,16 @@ export default function Header() {
             />
           </div>
           <div className="flex flex-col leading-tight border-l-2 border-white/20 pl-2 md:pl-3">
-            <span className="text-blue-500 text-[10px] md:text-xs font-black tracking-[0.2em] uppercase mt-1">
+            <span className="text-white text-[10px] md:text-xs font-black tracking-[0.2em] uppercase mt-1">
               TTB CORP
             </span>
-            <p className="text-[9px] md:text-[10px] text-slate-500 font-bold uppercase mt-2 tracking-wider">
+            <p className="text-[9px] md:text-[10px] text-white/70 font-bold uppercase mt-2 tracking-wider">
               Công ty Cổ Phần Thành Công
             </p>
           </div>
         </Link>
 
-        {/* 2. Menu Desktop - Giữ nguyên cấu trúc ẩn trên mobile */}
+        {/* 2. Menu Desktop */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8 text-[11px] lg:text-[12px] font-bold uppercase tracking-[0.15em] text-white/80">
           {navLinks.map((link) => (
             <Link
@@ -56,17 +56,17 @@ export default function Header() {
           ))}
         </div>
 
-        {/* 3. Nút Hotline Desktop & Nút Menu Mobile */}
+        {/* 3. Nút Hotline & Báo Giá */}
         <div className="flex items-center gap-4">
           <a
             href="tel:0792515151"
-            className="hidden lg:flex items-center gap-2 border-2 border-white/40 text-white px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-[#1e3a8a] transition-all duration-500"
+            className="hidden lg:flex items-center gap-2 border-2 border-white/40 text-white px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-[var(--brand-primary)] transition-all duration-500"
           >
             <Phone size={14} /> 0792.51.51.51
           </a>
 
           {/* Nút Báo Giá */}
-          <Link to="/contact" className="bg-white text-[#1e3a8a] px-4 md:px-6 py-2.5 rounded-xl font-bold hover:bg-amber-500 hover:text-white transition-all flex items-center gap-2 group shadow-lg text-[11px] md:text-sm no-underline">
+          <Link to="/contact" className="bg-white text-[var(--brand-primary)] px-4 md:px-6 py-2.5 rounded-xl font-bold hover:bg-[var(--brand-accent)] hover:text-white transition-all flex items-center gap-2 group shadow-lg text-[11px] md:text-sm no-underline">
             <span className="hidden sm:inline uppercase tracking-widest">BÁO GIÁ</span>
             <span className="sm:hidden uppercase font-black">Tư vấn</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -82,9 +82,9 @@ export default function Header() {
           </button>
         </div>
 
-        {/* 4. Overlay Menu Mobile - Hiện ra khi isOpen = true */}
+        {/* 4. Overlay Menu Mobile */}
         <div className={`
-          fixed inset-0 bg-[#1e3a8a] z-[100] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden
+          fixed inset-0 bg-[var(--brand-primary)] z-[100] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden
           ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-full'}
         `}>
           <div className="flex flex-col items-center gap-8">
@@ -93,7 +93,7 @@ export default function Header() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsOpen(false)}
-                className="text-2xl font-black text-white uppercase tracking-[0.2em] hover:text-blue-300 transition-colors"
+                className="text-2xl font-black text-white uppercase tracking-[0.2em] hover:text-[var(--brand-accent)] transition-colors"
               >
                 {link.label}
               </Link>
@@ -101,7 +101,7 @@ export default function Header() {
 
             <a
               href="tel:0792515151"
-              className="mt-4 flex items-center gap-3 bg-white text-[#1e3a8a] px-8 py-4 rounded-full text-sm font-black uppercase tracking-widest active:scale-95 transition-transform"
+              className="mt-4 flex items-center gap-3 bg-white text-[var(--brand-primary)] px-8 py-4 rounded-full text-sm font-black uppercase tracking-widest active:scale-95 transition-transform"
             >
               <Phone size={18} /> Gọi ngay: 0792.51.51.51
             </a>

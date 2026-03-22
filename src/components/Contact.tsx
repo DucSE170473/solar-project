@@ -46,18 +46,18 @@ export default function Contact() {
 
                     <div className="relative z-10 flex flex-col gap-4">
                         <div className="flex items-center gap-3">
-                            <div className="h-[2px] w-8 md:w-16 bg-amber-500"></div>
-                            <span className="text-[#3333CC] font-extrabold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[11px]">
+                            <div className="h-[2px] w-8 md:w-16 bg-[var(--brand-accent)]"></div>
+                            <span className="text-[var(--brand-primary)] font-extrabold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[11px]">
                                 Kết nối cùng TTB CORP
                             </span>
                         </div>
 
                         <h1 className="text-4xl md:text-8xl font-black leading-tight md:leading-[0.9] tracking-tighter uppercase text-white drop-shadow-2xl">
                             Liên hệ <br />
-                            <span className="relative inline-block text-[#4D4DFF] mt-2">
+                            <span className="relative inline-block text-[var(--brand-secondary)] mt-2">
                                 với chúng tôi
                                 <span className="absolute -bottom-2 left-0 w-full h-[4px] md:h-[8px] bg-white/10"></span>
-                                <span className="absolute -bottom-2 left-0 w-1/3 h-[4px] md:h-[8px] bg-amber-500"></span>
+                                <span className="absolute -bottom-2 left-0 w-1/3 h-[4px] md:h-[8px] bg-[var(--brand-accent)]"></span>
                             </span>
                         </h1>
 
@@ -67,10 +67,10 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* GRID CONTENT: Tự động chuyển đổi từ 1 cột (Mobile) sang 2 cột (Laptop) */}
+                {/* GRID CONTENT */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
 
-                    {/* CỘT 1: FORM TƯ VẤN (Sử dụng Refs - Gõ phím cực mượt) */}
+                    {/* CỘT 1: FORM TƯ VẤN */}
                     <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-slate-200/50 border border-slate-100 order-2 lg:order-1">
                         <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">
                             Gửi yêu cầu tư vấn
@@ -79,49 +79,49 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">Họ và tên</label>
+                                    <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Họ và tên</label>
                                     <input
                                         ref={nameRef}
                                         type="text"
                                         placeholder="Nguyễn Văn A"
-                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[#3333CC]/10 focus:border-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
                                         required
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">Số điện thoại</label>
+                                    <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Số điện thoại</label>
                                     <input
                                         ref={phoneRef}
                                         type="tel"
                                         placeholder="0792.51.51.51"
-                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[#3333CC]/10 focus:border-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
                                         required
                                     />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">Email liên hệ</label>
+                                <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Email liên hệ</label>
                                 <input
                                     ref={emailRef}
                                     type="email"
                                     placeholder="thanhcong@email.com"
-                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[#3333CC]/10 focus:border-[#3333CC] outline-none transition-all placeholder:text-slate-400"
+                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
                                     required
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase text-[#3333CC] tracking-widest ml-1">Chi tiết dự án</label>
+                                <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Chi tiết dự án</label>
                                 <textarea
                                     ref={messageRef}
                                     rows={4}
                                     placeholder="Mô tả ngắn gọn yêu cầu của bạn..."
-                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[#3333CC]/10 focus:border-[#3333CC] outline-none transition-all placeholder:text-slate-400 resize-none"
+                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400 resize-none"
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-gradient-to-r from-[#3333CC] to-[#4D4DFF] text-white py-5 rounded-[1.25rem] font-black flex items-center justify-center gap-4 transition-all duration-500 hover:from-amber-500 hover:to-amber-600 hover:-translate-y-1 shadow-lg group">
+                            <button type="submit" className="w-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] text-white py-5 rounded-[1.25rem] font-black flex items-center justify-center gap-4 transition-all duration-500 hover:from-[var(--brand-accent)] hover:to-[var(--brand-accent-hover)] hover:text-slate-900 hover:-translate-y-1 shadow-lg group">
                                 <span className="tracking-widest">GỬI YÊU CẦU NGAY</span>
                                 <div className="bg-white/20 p-2 rounded-xl group-hover:bg-white/40 transition-colors">
                                     <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -139,13 +139,13 @@ export default function Contact() {
                                 { icon: <Mail size={24} />, label: "Email công ty", content: "thanhcongtechco@gmail.com" },
                                 { icon: <Clock size={24} />, label: "Giờ làm việc", content: "Thứ 2 - Thứ 7: 08:00 - 17:30" }
                             ].map((item, idx) => (
-                                <div key={idx} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-[#3333CC]/20 transition-all group">
-                                    <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[#3333CC] flex items-center justify-center shrink-0 group-hover:bg-[#3333CC] group-hover:text-white transition-all duration-300">
+                                <div key={idx} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-[var(--brand-primary)]/20 transition-all group">
+                                    <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[var(--brand-primary)] flex items-center justify-center shrink-0 group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-all duration-300">
                                         {item.icon}
                                     </div>
                                     <div className="overflow-hidden">
                                         <p className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em]">{item.label}</p>
-                                        <p className={`text-sm font-bold mt-1 leading-snug ${item.highlight ? 'text-[#3333CC] font-black text-base' : 'text-slate-700'}`}>
+                                        <p className={`text-sm font-bold mt-1 leading-snug ${item.highlight ? 'text-[var(--brand-primary)] font-black text-base' : 'text-slate-700'}`}>
                                             {item.content}
                                         </p>
                                     </div>

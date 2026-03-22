@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 pt-12 md:pt-16 pb-8 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        
+
         {/* Grid chính: 1 cột (mobile) -> 2 cột (tablet) -> 4 cột (desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 border-b border-slate-800 pb-12">
 
@@ -38,9 +38,9 @@ export default function Footer() {
               Chuyên gia hàng đầu trong lĩnh vực tư vấn, thiết kế và thi công kết cấu thép nhà xưởng đạt chuẩn quốc tế.
             </p>
 
-            {/* Social Icons - Tăng kích thước vùng bấm (Touch target) cho mobile */}
+            {/* Social Icons - Tối giản cho đồng bộ */}
             <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-xl bg-slate-800 text-slate-300 hover:text-blue-400 hover:bg-slate-700 transition-all active:scale-95">
+              <a href="#" className="p-3 rounded-xl bg-slate-800 text-slate-300 hover:text-[var(--brand-accent)] hover:bg-slate-700 transition-all active:scale-95">
                 <Facebook size={20} />
               </a>
               <a href="#" className="p-3 rounded-xl bg-slate-800 text-slate-300 hover:text-red-500 hover:bg-slate-700 transition-all active:scale-95">
@@ -73,26 +73,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cột 4: Liên hệ - Tối ưu hiển thị địa chỉ dài */}
+          {/* Cột 4: Liên hệ - Đồng bộ hóa tuyệt đối */}
           <div className="space-y-4">
             <h4 className="text-white font-bold uppercase tracking-widest text-sm border-b border-slate-800 lg:border-none pb-2 lg:pb-0">Thông tin</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-blue-500 shrink-0 mt-0.5" />
+            <ul className="space-y-5 text-sm">
+              <li className="flex items-center gap-4 hover:text-white transition-colors group">
+                <MapPin size={18} className="text-[var(--brand-accent)] shrink-0" />
                 <span className="leading-relaxed">
-                  166/12 Huỳnh Văn Nghệ, P. Tân Sơn, TP. HCM <br />
-                  <span className="text-[11px] text-slate-500 italic block mt-1">Tan Son Ward, Ho Chi Minh City, Vietnam</span>
+                  166/12 Huỳnh Văn Nghệ, P. Tân Sơn, TP. HCM
                 </span>
               </li>
-              <li className="flex items-center gap-3 group">
-                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                  <Phone size={16} />
-                </div>
-                <a href="tel:0792515151" className="text-blue-500 shrink-0">0792.51.51.51</a>
+              <li className="flex items-center gap-4 hover:text-white transition-colors group">
+                <Phone size={18} className="text-[var(--brand-accent)] shrink-0" />
+                <a href="tel:0792515151" className="font-bold underline-offset-4 hover:underline">0792.51.51.51</a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-blue-500 shrink-0" />
-                <span className="break-all">thanhcongtechco@gmail.com</span>
+              <li className="flex items-center gap-4 hover:text-white transition-colors group">
+                <Mail size={18} className="text-[var(--brand-accent)] shrink-0" />
+                <a href="mailto:thanhcongtechco@gmail.com" className="break-all underline-offset-4 hover:underline">thanhcongtechco@gmail.com</a>
+              </li>
+              <li className="flex items-center gap-4 hover:text-white transition-colors group">
+                <Facebook size={18} className="text-[var(--brand-accent)] shrink-0" />
+                <a href="#" className="font-medium underline-offset-4 hover:underline">TTB CORP - Thành Công Group</a>
               </li>
             </ul>
           </div>
@@ -104,7 +105,7 @@ export default function Footer() {
             &copy; {year} <span className="text-blue-500 font-bold">THÀNH CÔNG GROUP</span>. All rights reserved.
           </p>
           <p className="text-slate-600 flex items-center gap-2">
-            Phát triển bởi 
+            Phát triển bởi
             <span className="px-2 py-0.5 bg-slate-800 rounded text-blue-400 font-black">TTC TECH</span>
           </p>
         </div>

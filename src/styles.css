@@ -63,6 +63,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Brand Colors */
+  --brand-primary: #1e3a8a;
+  --brand-primary-hover: #1e40af;
+  --brand-accent: #f59e0b;
+  --brand-accent-hover: #d97706;
+  --brand-secondary: #3b82f6;
+  --brand-text-main: #0f172a;
+  --brand-text-muted: #64748b;
 }
 
 :root[data-theme="dark"] {

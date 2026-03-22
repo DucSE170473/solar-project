@@ -6,7 +6,7 @@ import { Projects } from '../components/Projects'
 import CTA from '../components/CTA'
 import { CheckCircle2, Star } from "lucide-react"
 
-export const Route = createFileRoute('/')(  {
+export const Route = createFileRoute('/')({
   component: HomePage,
 })
 
@@ -17,49 +17,49 @@ function HomePage() {
       <Hero />
 
       {/* 2. TRUST BAR: Các con số biết nói */}
-      <section className="bg-blue-900 py-8 md:py-10 text-white">
+      <section className="bg-[var(--brand-primary)] py-8 md:py-10 text-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-wrap justify-around gap-6 md:gap-8 text-center">
-          <div className="space-y-1">
-            <p className="text-2xl md:text-3xl font-black text-amber-400">100%</p>
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest opacity-70">An toàn lao động</p>
+          <div className="space-y-1 text-[var(--brand-accent)]">
+            <p className="text-2xl md:text-3xl font-black">100%</p>
+            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70">An toàn lao động</p>
           </div>
-          <div className="space-y-1">
-            <p className="text-2xl md:text-3xl font-black text-amber-400">98%</p>
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest opacity-70">Đúng tiến độ</p>
+          <div className="space-y-1 text-[var(--brand-accent)]">
+            <p className="text-2xl md:text-3xl font-black">98%</p>
+            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70">Đúng tiến độ</p>
           </div>
-          <div className="space-y-1">
-            <p className="text-2xl md:text-3xl font-black text-amber-400">ISO 9001</p>
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest opacity-70">Tiêu chuẩn chất lượng</p>
+          <div className="space-y-1 text-[var(--brand-accent)]">
+            <p className="text-2xl md:text-3xl font-black">ISO 9001</p>
+            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70">Chất lượng</p>
           </div>
-          <div className="space-y-1">
-            <p className="text-2xl md:text-3xl font-black text-amber-400">24/7</p>
-            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest opacity-70">Hỗ trợ kỹ thuật</p>
+          <div className="space-y-1 text-[var(--brand-accent)]">
+            <p className="text-2xl md:text-3xl font-black">24/7</p>
+            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70">Hỗ trợ</p>
           </div>
         </div>
       </section>
 
-      {/* 3. ABOUT SECTION: Giới thiệu năng lực */}
+      {/* 3. ABOUT SECTION */}
       <About />
 
-      {/* 4. SERVICES: Tập trung vào Kết cấu thép */}
+      {/* 4. SERVICES */}
       <div className="bg-slate-50">
         <Services />
       </div>
 
-      {/* 5. WHY CHOOSE US: Tại sao khách hàng chọn TTB */}
+      {/* 5. WHY CHOOSE US */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <div className="relative">
-            <div className="absolute -top-4 -left-4 w-20 h-20 md:w-24 md:h-24 bg-blue-100 rounded-full -z-10 animate-pulse"></div>
+            <div className="absolute -top-4 -left-4 w-20 h-20 md:w-24 md:h-24 bg-[var(--brand-primary)]/10 rounded-full -z-10 animate-pulse"></div>
             <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1000"
+              src="/steel-6.jpg"
               alt="Quality Construction"
-              className="rounded-3xl shadow-2xl border-b-8 border-blue-900 w-full"
+              className="rounded-3xl shadow-2xl border-b-8 border-[var(--brand-primary)] w-full"
             />
           </div>
           <div className="space-y-6 md:space-y-8">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
-              SỰ KHÁC BIỆT TỪ <br /><span className="text-blue-800 tracking-tighter">THÀNH CÔNG GROUP</span>
+            <h2 className="text-3xl md:text-6xl font-black text-slate-900 leading-tight uppercase tracking-tighter">
+              Sự khác biệt từ <br /><span className="text-[var(--brand-primary)]">Thành Công Group</span>
             </h2>
             <div className="space-y-4 md:space-y-6">
               {[
@@ -67,11 +67,13 @@ function HomePage() {
                 { t: "Nhà xưởng hiện đại", d: "Dây chuyền sản xuất tự động đảm bảo độ chính xác tuyệt đối từng chi tiết thép." },
                 { t: "Pháp lý hoàn thiện", d: "Hỗ trợ trọn gói thủ tục thẩm duyệt PCCC và cấp phép xây dựng." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="mt-1 shrink-0"><CheckCircle2 className="text-blue-600" size={24} /></div>
+                <div key={i} className="flex gap-4 group">
+                  <div className="mt-1 shrink-0 bg-[var(--brand-primary)]/5 p-2 rounded-lg group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-colors">
+                    <CheckCircle2 size={24} />
+                  </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">{item.t}</h4>
-                    <p className="text-sm text-slate-500 leading-relaxed">{item.d}</p>
+                    <h4 className="font-bold text-slate-900 text-lg">{item.t}</h4>
+                    <p className="text-sm text-slate-500 leading-relaxed font-medium">{item.d}</p>
                   </div>
                 </div>
               ))}
@@ -80,23 +82,25 @@ function HomePage() {
         </div>
       </section>
 
-      {/* 6. PROJECTS: Minh chứng thực tế */}
+      {/* 6. PROJECTS */}
       <div className="border-t border-slate-100">
         <Projects />
       </div>
 
-      {/* 7. TESTIMONIALS: Ý kiến khách hàng */}
-      <section className="py-16 md:py-20 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
-          <div className="flex justify-center gap-1 mb-6 text-amber-500">
-            {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="currentColor" size={20} />)}
+      {/* 7. TESTIMONIALS */}
+      <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--brand-primary)]/10 to-transparent"></div>
+        <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
+          <div className="flex justify-center gap-1 mb-10 text-[var(--brand-accent)]">
+            {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="currentColor" size={24} />)}
           </div>
-          <p className="text-lg md:text-2xl font-medium italic text-slate-700 leading-relaxed">
+          <p className="text-xl md:text-3xl font-medium italic text-slate-700 leading-relaxed tracking-tight">
             "Chúng tôi hoàn toàn yên tâm khi bàn giao gói thầu kết cấu thép cho Thành Công Group. Tiến độ nhanh, kỹ thuật chuẩn và thái độ làm việc rất chuyên nghiệp."
           </p>
-          <div className="mt-6 md:mt-8">
-            <p className="font-black text-blue-900 uppercase">Chị Linh</p>
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Giám đốc dự án - Viettel</p>
+          <div className="mt-10 md:mt-12 flex flex-col items-center">
+            <div className="w-12 h-1 bg-[var(--brand-primary)] mb-6"></div>
+            <p className="font-black text-[var(--brand-primary)] uppercase tracking-widest text-lg">Chị Linh</p>
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mt-2">Giám đốc dự án - Viettel</p>
           </div>
         </div>
       </section>

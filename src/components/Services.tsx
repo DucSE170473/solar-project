@@ -35,7 +35,7 @@ export default function Services() {
   return (
     <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
       {/* Họa tiết trang trí nền */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#1e3a8a]/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--brand-primary)]/20 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Tiêu đề Section - Tối ưu Typography Mobile */}
@@ -46,24 +46,24 @@ export default function Services() {
 
           <div className="flex flex-col items-center gap-2 md:gap-3 relative z-10">
             <div className="flex items-center gap-3 md:gap-4">
-              <div className="h-[1px] w-8 md:w-12 bg-blue-900/20"></div>
-              <span className="text-blue-900 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-[8px] md:text-[10px]">
+              <div className="h-[1px] w-8 md:w-12 bg-[var(--brand-primary)]/20"></div>
+              <span className="text-[var(--brand-primary)] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-[8px] md:text-[10px]">
                 Công ty Cổ Phần Thành Công
               </span>
-              <div className="h-[1px] w-8 md:w-12 bg-blue-900/20"></div>
+              <div className="h-[1px] w-8 md:w-12 bg-[var(--brand-primary)]/20"></div>
             </div>
-            <span className="text-[#1e3a8a] font-black uppercase tracking-[0.2em] md:tracking-[0.25em] text-xl md:text-2xl drop-shadow-sm">
-              TTB <span className="text-amber-600">CORP</span>
+            <span className="text-[var(--brand-primary)] font-black uppercase tracking-[0.2em] md:tracking-[0.25em] text-xl md:text-2xl drop-shadow-sm">
+              TTB <span className="text-[var(--brand-accent)]">CORP</span>
             </span>
           </div>
 
           <h2 className="text-4xl md:text-7xl font-black text-slate-900 leading-tight md:leading-none tracking-tight md:tracking-[-0.02em] uppercase">
-            <span className="text-[#1e3a8a]">Giải pháp</span>
+            <span className="text-[var(--brand-primary)]">Giải pháp</span>
             <br />
             <span className="relative inline-block mt-2 md:mt-4">
               Kết cấu thép
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-[4px] md:h-[8px] bg-[#1e3a8a]"></span>
-              <span className="absolute -bottom-4 md:-bottom-7 left-0 w-2/3 h-[1px] md:h-[2px] bg-amber-500"></span>
+              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-[4px] md:h-[8px] bg-[var(--brand-primary)]"></span>
+              <span className="absolute -bottom-4 md:-bottom-7 left-0 w-2/3 h-[1px] md:h-[2px] bg-[var(--brand-accent)]"></span>
             </span>
             <span className="block mt-8 md:mt-12 text-xl md:text-4xl font-light tracking-[0.2em] md:tracking-[0.4em] text-slate-400">
               Toàn diện
@@ -95,7 +95,7 @@ export default function Services() {
 
               {/* Nội dung text */}
               <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 text-[#1e3a8a] leading-tight">
+                <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 text-[var(--brand-primary)] leading-tight">
                   {item.title}
                 </h3>
                 <p className="text-sm text-slate-700 font-bold leading-relaxed mb-4 md:mb-8 opacity-90">
@@ -104,14 +104,14 @@ export default function Services() {
               </div>
 
               {/* Viền chạy khi hover */}
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-amber-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[var(--brand-accent)] -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
             </div>
           ))}
         </div>
 
         {/* Khối CTA Báo giá - Tối ưu Layout cho Mobile */}
         <div className="mt-16 md:mt-24 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group">
-          <div className="absolute inset-0 bg-[#1e3a8a]">
+          <div className="absolute inset-0 bg-[var(--brand-primary)]">
             <img
               src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=1200"
               className="w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-[3s]"
@@ -121,7 +121,7 @@ export default function Services() {
 
           <div className="relative z-10 p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
             <div className="max-w-xl text-center lg:text-left space-y-4">
-              <span className="bg-amber-500 text-slate-900 px-4 py-1 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest inline-block">
+              <span className="bg-[var(--brand-accent)] text-slate-900 px-4 py-1 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-widest inline-block">
                 Tư vấn miễn phí
               </span>
               <div className="space-y-2">
@@ -131,11 +131,11 @@ export default function Services() {
                 <h4 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] md:leading-[0.9] uppercase tracking-tighter">
                   Kết cấu thép <br className="hidden sm:block" />
                   <span className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center lg:justify-start mt-2">
-                    <span className="text-amber-400">&</span>
+                    <span className="text-[var(--brand-accent)]">&</span>
                     <span className="relative">
                       Hệ thống PCCC
-                      <span className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-[3px] md:h-[4px] bg-amber-500/30"></span>
-                      <span className="absolute -bottom-0.5 md:-bottom-1 left-0 w-1/3 h-[3px] md:h-[4px] bg-amber-500"></span>
+                      <span className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-[3px] md:h-[4px] bg-[var(--brand-accent)]/30"></span>
+                      <span className="absolute -bottom-0.5 md:-bottom-1 left-0 w-1/3 h-[3px] md:h-[4px] bg-[var(--brand-accent)]"></span>
                     </span>
                   </span>
                 </h4>
@@ -145,10 +145,10 @@ export default function Services() {
 
             <a
               href="tel:0792515151"
-              className="w-full lg:w-auto bg-white hover:bg-amber-500 text-blue-700 hover:text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all duration-500 flex items-center justify-center gap-4 shadow-xl hover:-translate-y-2 active:scale-95 group/btn"
+              className="w-full lg:w-auto bg-white hover:bg-[var(--brand-accent)] text-[var(--brand-primary)] hover:text-white px-8 md:px-10 py-5 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all duration-500 flex items-center justify-center gap-4 shadow-xl hover:-translate-y-2 active:scale-95 group/btn"
             >
               GỌI NGAY: 0792.51.51.51
-              <div className="bg-blue-700 p-2 rounded-full group-hover/btn:bg-white group-hover/btn:text-blue-700 transition-colors">
+              <div className="bg-[var(--brand-primary)] p-2 rounded-full group-hover/btn:bg-white group-hover/btn:text-[var(--brand-primary)] transition-colors">
                 <ArrowUpRight size={18} />
               </div>
             </a>
