@@ -1,104 +1,109 @@
-import { Download, Zap } from "lucide-react"
+import { Download, Sun, MoveRight, Globe2 } from "lucide-react"
 import { Link } from "@tanstack/react-router"
 
-export default function Hero() {
+export default function SolarHero() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-white overflow-hidden pt-20 md:pt-0">
-
-      {/* Lớp ảnh nền đại cảnh */}
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-slate-50 overflow-hidden pt-20 md:pt-0">
+      
+      {/* Lớp nền High-Tech: Thay đổi sang dạng lưới hoặc ảnh mảng xanh */}
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-50/50 via-transparent to-transparent"></div>
         <img
-          src="/hero-steel-bg.jpg"
-          alt="TTB Corp Industrial Foundation"
-          className="w-full h-full object-cover opacity-[0.05] grayscale"
+          src="public/solar-5.png" // Ảnh pattern dạng tế bào quang điện hoặc lưới điện xanh
+          alt="Zonprosolar Tech Foundation"
+          className="w-full h-full object-cover opacity-[0.5] mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
 
-        {/* Khối nội dung bên trái - Tối ưu Typography Mobile */}
+        {/* Khối nội dung bên trái */}
         <div className="order-2 lg:order-1 space-y-6 md:space-y-8 text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 rounded-full bg-[var(--brand-primary)]/5 border border-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-sm backdrop-blur-sm mx-auto lg:mx-0">
+          {/* Label động: Nhấn mạnh Công nghệ bán dẫn */}
+          <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] shadow-sm backdrop-blur-sm mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-primary)] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--brand-primary)]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Chuyên gia kết cấu thép & PCCC
+            Công nghệ pin mặt trời bán dẫn
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[6.5rem] font-black leading-[1] md:leading-[0.85] tracking-tighter uppercase">
-            <span className="block text-base md:text-2xl lg:text-3xl font-light tracking-[0.2em] md:tracking-[0.3em] text-slate-400 mb-2 md:mb-4">
-              Vững nền tảng
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.1] md:leading-[0.95] tracking-tight">
+            <span className="block text-base md:text-2xl font-medium tracking-[0.15em] text-slate-500 mb-2 uppercase">
+              Dẫn nguồn sáng xanh
             </span>
-            <span className="relative inline-block text-[var(--brand-primary)]">
-              Sáng tương lai
-              {/* Gạch chân kỹ thuật - Thu nhỏ trên mobile */}
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-2 md:h-3 bg-[var(--brand-primary)]/10 rounded-full"></span>
-              <span className="absolute -bottom-2 md:-bottom-4 left-0 w-1/3 h-2 md:h-3 bg-[var(--brand-accent)] rounded-full"></span>
+            <span className="relative inline-block text-slate-900">
+              Pin Mặt Trời
+              <br />
+              <span className="text-emerald-500 italic">Ở Mọi Nơi</span>
+              {/* Trang trí hiệu ứng ánh sáng */}
+              <span className="absolute -top-4 -right-8 text-amber-400 opacity-50 hidden md:block">
+                <Sun size={48} strokeWidth={1} />
+              </span>
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed font-medium border-l-0 lg:border-l-4 border-[var(--brand-primary)]/20 pl-0 lg:pl-6 mx-auto lg:mx-0">
-            <span className="text-[var(--brand-primary)] font-black italic uppercase tracking-wider">TTB CORP</span>
-            <br className="hidden md:block" />
-            Hệ sinh thái hạ tầng công nghiệp trọn gói:
-            <br className="hidden md:block" />
-            Tư vấn tối ưu - Thiết kế chính xác - Thi công thần tốc.
+          <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed border-l-0 lg:border-l-4 border-emerald-500/30 pl-0 lg:pl-6 mx-auto lg:mx-0">
+            <span className="text-emerald-600 font-bold uppercase tracking-wider">ZONPROSOLAR (TTCO)</span>
+            <br />
+            Giải pháp tấm pin <span className="font-bold text-slate-800">siêu nhẹ (8.1kg)</span> và <span className="font-bold text-slate-800">siêu dẻo</span>. 
+            Không cần khung đỡ, lắp đặt trên mọi bề mặt cong và mái tôn yếu.
           </p>
 
-          {/* Button Group - Xếp chồng trên mobile cực nhỏ */}
+          {/* Button Group */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 md:gap-5 pt-4">
             <Link
-              to="/contact"
-              className="bg-[var(--brand-primary)] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black hover:bg-[var(--brand-primary)]/90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-[var(--brand-primary)]/20 hover:-translate-y-1 active:scale-95 uppercase text-xs md:text-sm tracking-widest"
+              to="/projects"
+              className="bg-emerald-600 text-white px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-3 shadow-lg shadow-emerald-200 hover:-translate-y-1 active:scale-95 uppercase text-xs md:text-sm"
             >
-              Liên hệ tư vấn
-              <Zap size={18} fill="currentColor" />
+              Khám phá dự án
+              <MoveRight size={18} />
             </Link>
 
             <a
-              href="/PROFILE TTB - Thanh Cong TTB Joint Stock Company.pdf"
+              href="/2-12_ZONPROSOLAR CORPORATE BROCHURE(A.2)2025.7.28.pdf"
               target="_blank"
-              className="bg-white border-2 border-slate-200 px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-slate-700 hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-all flex items-center justify-center gap-3 group uppercase text-xs md:text-sm tracking-tighter"
+              className="bg-white border-2 border-slate-200 px-8 md:px-10 py-4 md:py-5 rounded-xl font-bold text-slate-700 hover:border-emerald-500 hover:text-emerald-500 transition-all flex items-center justify-center gap-3 group uppercase text-xs md:text-sm"
             >
               <Download size={20} className="group-hover:translate-y-1 transition-transform" />
-              Hồ sơ năng lực
+              Catalogue (PDF)
             </a>
           </div>
         </div>
 
-        {/* Khối ảnh bên phải - Giảm size trên mobile để không chiếm hết màn hình */}
+        {/* Khối ảnh bên phải - Hiển thị độ dẻo của pin */}
         <div className="order-1 lg:order-2 relative px-4 md:px-0">
-          <div className="relative z-10 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] md:border-[12px] border-white group">
+          <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border-[8px] border-white group">
             <img
-              src="/img-hero-steel.jpg"
-              alt="Steel Structure"
+              src="public/solar-7.jpg" // Nên dùng ảnh pin đang uốn cong hoặc dán trên mái tôn
+              alt="Zonprosolar Flexible Panel"
               className="w-full object-cover aspect-[4/3] md:aspect-[4/5] group-hover:scale-105 transition-transform duration-1000"
             />
+            {/* Lớp phủ gradient nhẹ lên ảnh */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
           </div>
 
-          {/* Badge ISO - Định vị trong ảnh, không tràn ra ngoài */}
-          <div className="absolute bottom-4 -left-2 md:bottom-6 md:-left-8 z-20 bg-white p-4 md:p-6 rounded-2xl md:rounded-[2rem] shadow-xl border border-slate-100 animate-bounce-slow scale-75 md:scale-100">
-            <div className="flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-14 md:h-14 bg-amber-100 text-amber-600 rounded-xl md:rounded-2xl flex items-center justify-center">
-                <Zap className="w-5 h-5 md:w-7 md:h-7" fill="currentColor" />
+          {/* Badge Thông số nổi bật - Thay vì ISO, hãy dùng trọng lượng hoặc độ dẻo */}
+          <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 z-20 bg-emerald-600 p-5 md:p-8 rounded-[2rem] shadow-2xl text-white animate-float">
+            <div className="text-center">
+              <p className="text-[10px] font-medium uppercase tracking-widest opacity-80 mb-1 text-emerald-100">Trọng lượng</p>
+              <p className="text-3xl md:text-5xl font-black italic">8.1<span className="text-lg">kg</span></p>
+              <div className="h-1 w-full bg-white/20 my-2 rounded-full overflow-hidden">
+                 <div className="h-full bg-white w-2/3"></div>
               </div>
-              <div>
-                <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Tiêu chuẩn</p>
-                <p className="text-lg md:text-2xl font-black text-[var(--brand-primary)]">ISO 9001</p>
-              </div>
+              <p className="text-[9px] md:text-[11px] font-bold uppercase tracking-tighter">Siêu nhẹ - Siêu bền</p>
             </div>
           </div>
 
-          {/* Blur Orbs - Ẩn bớt trên mobile để mượt máy */}
-          <div className="absolute -top-10 -right-10 h-40 md:h-80 w-40 md:w-80 bg-[var(--brand-primary)]/10 rounded-full -z-10 blur-[50px] md:blur-[80px]"></div>
+          {/* Tech Orbs - Đổi màu sang xanh lục */}
+          <div className="absolute -top-10 -right-10 h-60 w-60 bg-emerald-200/30 rounded-full -z-10 blur-[80px]"></div>
+          <div className="absolute bottom-0 left-0 h-40 w-40 bg-blue-200/20 rounded-full -z-10 blur-[60px]"></div>
         </div>
       </div>
 
-      {/* Text chạy chìm khổng lồ - Ẩn trên Mobile để tránh lỗi layout */}
-      <div className="absolute bottom-[-5%] left-[-2%] text-[10rem] lg:text-[20rem] font-black text-slate-50 pointer-events-none select-none italic tracking-tighter opacity-40 hidden md:block">
-        TTB CORP
+      {/* Text chạy chìm khổng lồ */}
+      <div className="absolute bottom-[-2%] right-[-2%] text-[8rem] lg:text-[15rem] font-black text-slate-200/40 pointer-events-none select-none italic tracking-tighter hidden md:block">
+        ZONPROSOLAR
       </div>
     </section>
   )

@@ -1,8 +1,8 @@
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react"
 import { useRef } from "react"
 
-export default function Contact() {
-    // 1. Khởi tạo Refs để lấy dữ liệu mà không gây re-render (Chống lag 100%)
+export default function SolarContact() {
+    // Refs duy trì hiệu suất cao, không gây re-render
     const nameRef = useRef<HTMLInputElement>(null);
     const phoneRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
@@ -11,7 +11,6 @@ export default function Contact() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         
-        // Lấy giá trị trực tiếp từ các ô input
         const formData = {
             name: nameRef.current?.value,
             phone: phoneRef.current?.value,
@@ -20,132 +19,138 @@ export default function Contact() {
         }
 
         console.log("Dữ liệu gửi đi:", formData)
-        alert("Cảm ơn bạn! Thành Công Group sẽ liên hệ lại sớm nhất.")
+        alert("Cảm ơn bạn! Đội ngũ kỹ thuật Zonprosolar sẽ liên hệ tư vấn giải pháp pin bán dẫn trong vòng 24h.")
         
-        // Reset form sau khi gửi thành công
         if (e.currentTarget instanceof HTMLFormElement) {
             e.currentTarget.reset();
         }
     }
 
     return (
-        <section className="py-10 md:py-20 bg-slate-50 font-sans">
+        <section className="py-10 md:py-24 bg-white font-sans overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
 
-                {/* HEADER BANNER: Giữ nguyên vẻ sang trọng trên mọi thiết bị */}
-                <div className="relative p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] overflow-hidden group mb-12 shadow-xl">
-                    <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
+                {/* HEADER BANNER: Phong cách Năng lượng sạch */}
+                <div className="relative p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden group mb-16 shadow-[0_20px_50px_rgba(16,185,129,0.15)] bg-emerald-950">
+                    {/* Background Pattern Năng lượng */}
+                    <div className="absolute inset-0 z-0 opacity-40">
                         <img
-                            src="/steel-5.jpg" 
-                            alt="TTB Corp Background"
-                            className="w-full h-full object-cover brightness-50"
+                            src="public/solar-3.jpg" // Thay bằng ảnh cánh đồng pin mặt trời
+                            alt="Zonprosolar Energy"
+                            className="w-full h-full object-cover mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[3s]"
                         />
                     </div>
 
-                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-emerald-950 via-emerald-900/60 to-transparent"></div>
 
-                    <div className="relative z-10 flex flex-col gap-4">
+                    <div className="relative z-10 flex flex-col gap-6">
                         <div className="flex items-center gap-3">
-                            <div className="h-[2px] w-8 md:w-16 bg-[var(--brand-accent)]"></div>
-                            <span className="text-[var(--brand-primary)] font-extrabold uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[11px]">
-                                Kết nối cùng TTB CORP
+                            <div className="h-[2px] w-12 md:w-20 bg-emerald-400"></div>
+                            <span className="text-emerald-400 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs">
+                                Đồng hành cùng TTCO Technology
                             </span>
                         </div>
 
-                        <h1 className="text-4xl md:text-8xl font-black leading-tight md:leading-[0.9] tracking-tighter uppercase text-white drop-shadow-2xl">
-                            Liên hệ <br />
-                            <span className="relative inline-block text-[var(--brand-secondary)] mt-2">
-                                với chúng tôi
-                                <span className="absolute -bottom-2 left-0 w-full h-[4px] md:h-[8px] bg-white/10"></span>
-                                <span className="absolute -bottom-2 left-0 w-1/3 h-[4px] md:h-[8px] bg-[var(--brand-accent)]"></span>
+                        <h1 className="text-4xl md:text-8xl font-black leading-[0.95] tracking-tighter uppercase text-white">
+                            Khởi tạo <br />
+                            <span className="relative inline-block text-emerald-400 italic">
+                                Sáng xanh
+                                <span className="absolute -bottom-2 left-0 w-full h-[4px] md:h-[6px] bg-white/5"></span>
+                                <span className="absolute -bottom-2 left-0 w-2/3 h-[4px] md:h-[6px] bg-emerald-500 rounded-full"></span>
                             </span>
                         </h1>
 
-                        <p className="text-slate-300 font-medium text-[10px] md:text-sm mt-4 max-w-[250px] md:max-w-md uppercase tracking-[0.15em] leading-relaxed opacity-80">
-                            Giải pháp kết cấu thép & PCCC <br /> tiêu chuẩn quốc tế cho doanh nghiệp.
+                        <p className="text-emerald-100/70 font-medium text-xs md:text-lg mt-2 max-w-md leading-relaxed border-l-2 border-emerald-500/30 pl-4">
+                            Giải pháp pin mặt trời bán dẫn siêu nhẹ 8.1kg. <br className="hidden md:block" />
+                            Tiết kiệm chi phí - Bảo vệ mái công trình.
                         </p>
                     </div>
+
+                    {/* Decorative Sun Element */}
+                    <div className="absolute top-10 right-10 w-32 h-32 bg-emerald-400/20 rounded-full blur-[60px] animate-pulse"></div>
                 </div>
 
                 {/* GRID CONTENT */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-start">
 
-                    {/* CỘT 1: FORM TƯ VẤN */}
-                    <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-slate-200/50 border border-slate-100 order-2 lg:order-1">
-                        <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-8 uppercase tracking-tight">
-                            Gửi yêu cầu tư vấn
+                    {/* CỘT 1: FORM TƯ VẤN (Giao diện hiện đại, tối giản) */}
+                    <div className="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-100 shadow-sm order-2 lg:order-1 relative">
+                        <div className="absolute -top-4 -left-4 w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
+                             <Globe size={24} />
+                        </div>
+
+                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 tracking-tight">
+                            Yêu cầu tư vấn kỹ thuật
                         </h3>
                         
-                        <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Họ và tên</label>
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="group space-y-2">
+                                    <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 group-focus-within:text-emerald-600 transition-colors">Danh tính</label>
                                     <input
                                         ref={nameRef}
                                         type="text"
                                         placeholder="Nguyễn Văn A"
-                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 text-slate-900 font-semibold focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all shadow-sm"
                                         required
                                     />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Số điện thoại</label>
+                                <div className="group space-y-2">
+                                    <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 group-focus-within:text-emerald-600 transition-colors">Số điện thoại</label>
                                     <input
                                         ref={phoneRef}
                                         type="tel"
                                         placeholder="0792.51.51.51"
-                                        className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 text-slate-900 font-semibold focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all shadow-sm"
                                         required
                                     />
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Email liên hệ</label>
+                            <div className="group space-y-2">
+                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 group-focus-within:text-emerald-600 transition-colors">Địa chỉ Email</label>
                                 <input
                                     ref={emailRef}
                                     type="email"
-                                    placeholder="thanhcong@email.com"
-                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400"
+                                    placeholder="thanhcongtechco@gmail.com"
+                                    className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 text-slate-900 font-semibold focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all shadow-sm"
                                     required
                                 />
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase text-[var(--brand-primary)] tracking-widest ml-1">Chi tiết dự án</label>
+                            <div className="group space-y-2">
+                                <label className="text-[10px] font-bold uppercase text-slate-400 tracking-widest ml-1 group-focus-within:text-emerald-600 transition-colors">Diện tích lắp đặt (Dự kiến)</label>
                                 <textarea
                                     ref={messageRef}
                                     rows={4}
-                                    placeholder="Mô tả ngắn gọn yêu cầu của bạn..."
-                                    className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 text-black font-semibold focus:bg-white focus:ring-4 focus:ring-[var(--brand-primary)]/10 focus:border-[var(--brand-primary)] outline-none transition-all placeholder:text-slate-400 resize-none"
+                                    placeholder="Ví dụ: Lắp đặt 500m2 mái tôn xưởng mỏng tại Bình Dương..."
+                                    className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 text-slate-900 font-semibold focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 outline-none transition-all shadow-sm resize-none"
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] text-white py-5 rounded-[1.25rem] font-black flex items-center justify-center gap-4 transition-all duration-500 hover:from-[var(--brand-accent)] hover:to-[var(--brand-accent-hover)] hover:text-slate-900 hover:-translate-y-1 shadow-lg group">
-                                <span className="tracking-widest">GỬI YÊU CẦU NGAY</span>
-                                <div className="bg-white/20 p-2 rounded-xl group-hover:bg-white/40 transition-colors">
-                                    <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                </div>
+                            <button type="submit" className="w-full bg-emerald-600 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-4 transition-all duration-300 hover:bg-emerald-700 hover:-translate-y-1 shadow-xl shadow-emerald-100 group">
+                                <span className="tracking-widest uppercase text-sm">Gửi thông tin tư vấn</span>
+                                <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                         </form>
                     </div>
 
-                    {/* CỘT 2: THÔNG TIN LIÊN HỆ & BẢN ĐỒ */}
-                    <div className="space-y-8 order-1 lg:order-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                    {/* CỘT 2: THÔNG TIN CHI TIẾT */}
+                    <div className="space-y-10 order-1 lg:order-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {[
-                                { icon: <MapPin size={24} />, label: "Địa chỉ trụ sở", content: "166/12 Huỳnh Văn Nghệ, P. Tân Sơn, TP. HCM" },
-                                { icon: <Phone size={24} />, label: "Hotline hỗ trợ", content: "0792.51.51.51", highlight: true },
-                                { icon: <Mail size={24} />, label: "Email công ty", content: "thanhcongtechco@gmail.com" },
-                                { icon: <Clock size={24} />, label: "Giờ làm việc", content: "Thứ 2 - Thứ 7: 08:00 - 17:30" }
+                                { icon: <MapPin size={22} />, label: "Văn phòng TP. HCM", content: "166 Huỳnh Văn Nghệ, P. Tân Sơn, Q. Tân Bình" },
+                                { icon: <Phone size={22} />, label: "Hotline Tư vấn 24/7", content: "0792.51.51.51", highlight: true },
+                                { icon: <Mail size={22} />, label: "Hỗ trợ kỹ thuật", content: "thanhcongtechco@gmail.com" },
+                                { icon: <Clock size={22} />, label: "Thời gian làm việc", content: "Thứ 2 - Thứ 7 (08:00 - 17:30)" }
                             ].map((item, idx) => (
-                                <div key={idx} className="flex gap-4 p-6 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md hover:border-[var(--brand-primary)]/20 transition-all group">
-                                    <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[var(--brand-primary)] flex items-center justify-center shrink-0 group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-all duration-300">
+                                <div key={idx} className="flex flex-col gap-4 p-8 bg-slate-50 rounded-[2rem] border border-transparent hover:border-emerald-200 hover:bg-white transition-all group shadow-sm hover:shadow-md">
+                                    <div className="h-12 w-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
                                         {item.icon}
                                     </div>
-                                    <div className="overflow-hidden">
-                                        <p className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em]">{item.label}</p>
-                                        <p className={`text-sm font-bold mt-1 leading-snug ${item.highlight ? 'text-[var(--brand-primary)] font-black text-base' : 'text-slate-700'}`}>
+                                    <div>
+                                        <p className="text-[10px] font-bold uppercase text-slate-400 tracking-[0.2em]">{item.label}</p>
+                                        <p className={`text-sm font-bold mt-2 leading-snug ${item.highlight ? 'text-emerald-600 text-lg' : 'text-slate-700'}`}>
                                             {item.content}
                                         </p>
                                     </div>
@@ -153,11 +158,15 @@ export default function Contact() {
                             ))}
                         </div>
 
-                        {/* BẢN ĐỒ: Bo góc cực lớn đồng nhất với thiết kế */}
-                        <div className="rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl aspect-[4/3] md:h-[400px]">
+                        {/* MAP - Bo góc mượt mà */}
+                        <div className="rounded-[3rem] overflow-hidden border-8 border-slate-50 shadow-inner h-[300px] md:h-[350px] relative">
+                             <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-4 py-2 rounded-full border border-emerald-100 shadow-sm text-[10px] font-bold text-emerald-700 flex items-center gap-2">
+                                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+                                Trụ sở Thành Công TTCo Group
+                             </div>
                             <iframe
-                               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966965610815!2d106.6348!3d10.8143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752943194a5005%3A0x6739665f8a0a91e3!2zMTY2LzEyIEh14buzbmggVsSDbiBOZ2jhu4csIFBoxrDhu51uZyAxNSwgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrCBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s"
-                                className="w-full h-full border-0 grayscale-[0.3] contrast-125"
+                               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.948218652614!2d106.6375!3d10.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294336021a81%3A0x6b14d2e1329c298!2s166%20Hu%E1%BB%B3nh%20V%C4%83n%20Ngh%E1%BB%87!5e0!3m2!1svi!2svn!4v1620000000000!5m2!1svi!2svn"
+                                className="w-full h-full border-0 contrast-[1.1] saturate-[1.2]"
                                 allowFullScreen
                                 loading="lazy"
                             ></iframe>

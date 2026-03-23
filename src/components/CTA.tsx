@@ -1,88 +1,88 @@
-import { ArrowRight, Phone } from "lucide-react"
+import { ArrowRight, Phone, Sun, Zap } from "lucide-react"
 import { useState } from "react"
 import { Link } from "@tanstack/react-router"
 
-export default function CTA() {
+export default function SolarCTA() {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <section className="py-12 md:py-24 bg-slate-50 transition-all duration-500">
+    <section className="py-12 md:py-24 bg-white transition-all duration-500 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-[var(--brand-primary)] shadow-2xl group transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(30,58,138,0.4)]">
+        <div className="relative overflow-hidden rounded-[2.5rem] md:rounded-[4rem] bg-emerald-950 shadow-[0_40px_100px_-20px_rgba(16,185,129,0.25)] group transition-all duration-700">
 
           {/* Lớp ảnh nền thực tế & Xử lý lỗi ảnh */}
           <div className="absolute inset-0 z-0">
             {!imgError ? (
               <img
-                src="/steel-cta-bg.jpg" // Đảm bảo file này ở thư mục public/
-                alt="TTB Corp Industrial Project"
+                src="public/solar-4.jpg" // Nên dùng ảnh một mái nhà xưởng phủ kín pin dẻo Zonpro
+                alt="Zonprosolar Green Project"
                 onError={() => setImgError(true)}
-                className="w-full h-full object-cover opacity-30 mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[2000ms] blur-[0.3px] group-hover:blur-0"
+                className="w-full h-full object-cover opacity-30 mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[3000ms]"
               />
             ) : (
-              // Fallback khi ảnh lỗi: Gradient nghệ thuật theo tone màu thương hiệu
-              <div className="w-full h-full bg-gradient-to-br from-[var(--brand-primary)] via-[var(--brand-secondary)] to-[var(--brand-primary-hover)] opacity-50" />
+              <div className="w-full h-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950 opacity-60" />
             )}
             
-            {/* Lớp phủ Gradient thông minh */}
-            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[var(--brand-primary)] via-[var(--brand-primary)]/90 md:via-[var(--brand-primary)]/70 to-transparent"></div>
+            {/* Lớp phủ Gradient chuẩn Tech-Green */}
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-emerald-950 via-emerald-900/90 md:via-emerald-900/60 to-transparent"></div>
           </div>
 
-          <div className="relative z-10 px-6 py-12 md:px-20 md:py-20 flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-12">
+          <div className="relative z-10 px-8 py-16 md:px-20 md:py-24 flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
 
             {/* Khối Tiêu đề & Nội dung */}
-            <div className="max-w-2xl text-center lg:text-left space-y-6 md:space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mx-auto lg:mx-0">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--brand-accent)] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--brand-accent)]"></span>
+            <div className="max-w-3xl text-center lg:text-left space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-emerald-400/10 border border-emerald-400/20 backdrop-blur-md mx-auto lg:mx-0">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
                 </span>
-                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-white">
-                  Tư vấn khảo sát miễn phí 24/7
+                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-emerald-300">
+                  Khảo sát kỹ thuật miễn phí
                 </span>
               </div>
 
-              <h2 className="text-3xl md:text-6xl font-black leading-[1.1] md:leading-[0.9] text-white uppercase tracking-tighter">
-                <span className="block text-lg md:text-3xl font-light tracking-[0.1em] md:tracking-[0.2em] text-blue-200 mb-2 md:mb-4 opacity-80">
-                  Bắt đầu ngay
+              <h2 className="text-4xl md:text-7xl lg:text-8xl font-black leading-[1.1] md:leading-[0.9] text-white uppercase tracking-tighter">
+                <span className="block text-xl md:text-3xl font-light tracking-[0.2em] text-emerald-200/60 mb-3">
+                  Sẵn sàng chuyển đổi
                 </span>
-                Dự án công nghiệp <br className="hidden md:block" />
-                <span className="text-[var(--brand-accent)] drop-shadow-2xl">của bạn hôm nay</span>
+                Năng lượng xanh <br className="hidden md:block" />
+                <span className="text-emerald-400 italic">Cho mọi công trình</span>
               </h2>
 
-              <p className="text-blue-50 text-base md:text-lg font-medium max-w-xl opacity-90 leading-relaxed italic border-l-4 border-[var(--brand-accent)] pl-4 md:pl-6 mx-auto lg:mx-0 w-fit text-left">
-                "TTB CORP cam kết mang lại giải pháp kết cấu thép tối ưu về chi phí và bền bỉ cùng thời gian."
+              <p className="text-emerald-50/80 text-base md:text-xl font-medium max-w-xl leading-relaxed border-l-4 border-emerald-500 pl-6 mx-auto lg:mx-0 text-left">
+                "Zonprosolar cam kết giải pháp pin bán dẫn siêu nhẹ, bảo vệ kết cấu mái và tối ưu hóa hiệu suất đầu tư bền vững."
               </p>
             </div>
 
             {/* Khối Nút hành động */}
-            <div className="flex flex-col w-full sm:w-auto gap-4 shrink-0 relative z-20">
-              {/* Nút Gọi ngay */}
+            <div className="flex flex-col w-full sm:w-auto gap-5 shrink-0 relative z-20">
+              {/* Nút Gọi ngay - Ưu tiên Hotline 0792.51.51.51 */}
               <a
                 href="tel:0792515151"
-                className="group/btn bg-white text-[var(--brand-primary)] px-8 md:px-10 py-5 md:py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-[var(--brand-accent)] hover:text-white transition-all duration-300 shadow-xl hover:-translate-y-1 uppercase text-sm"
+                className="group/btn bg-white text-emerald-900 px-10 py-6 md:py-7 rounded-[2rem] font-black flex items-center justify-center gap-4 hover:bg-emerald-400 hover:text-white transition-all duration-500 shadow-2xl hover:-translate-y-2 uppercase text-sm md:text-base tracking-widest"
               >
-                <div className="bg-[var(--brand-primary)] group-hover/btn:bg-white p-2 rounded-full transition-colors animate-pulse group-hover/btn:animate-none">
-                  <Phone size={18} className="text-white group-hover/btn:text-[var(--brand-accent)] transition-colors" />
+                <div className="bg-emerald-600 group-hover/btn:bg-white p-2.5 rounded-full transition-colors animate-bounce-slow">
+                  <Phone size={20} className="text-white group-hover/btn:text-emerald-600 transition-colors" />
                 </div>
                 0792.51.51.51
               </a>
 
-              {/* Nút Chuyển trang Contact */}
+              {/* Nút Yêu cầu báo giá */}
               <Link
                 to="/contact"
-                className="group/btn2 bg-transparent text-white border-2 border-white/30 px-8 md:px-10 py-5 md:py-6 rounded-2xl font-black flex items-center justify-center gap-4 hover:bg-white/10 hover:border-white transition-all duration-300 uppercase text-sm overflow-hidden relative"
+                className="group/btn2 bg-emerald-500/10 text-white border-2 border-emerald-400/30 px-10 py-6 md:py-7 rounded-[2rem] font-black flex items-center justify-center gap-4 hover:bg-emerald-500 hover:border-emerald-500 transition-all duration-500 uppercase text-sm md:text-base tracking-widest overflow-hidden relative backdrop-blur-sm"
               >
-                <span className="relative z-10">Gửi yêu cầu thiết kế</span>
-                <ArrowRight size={20} className="relative z-10 group-hover/btn2:translate-x-2 transition-transform text-[var(--brand-accent)]" />
+                <span className="relative z-10">Báo giá giải pháp</span>
+                <Zap size={20} className="relative z-10 group-hover/btn2:animate-pulse text-emerald-400 transition-transform" />
               </Link>
             </div>
 
           </div>
 
-          {/* Họa tiết TTB Branding chìm */}
-          <div className="absolute bottom-[-10%] right-[-2%] text-[10rem] md:text-[18rem] font-black text-white/5 pointer-events-none select-none italic tracking-tighter leading-none hidden md:block">
-            TTB
+          {/* Họa tiết Sunburst chạy chìm */}
+          <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none select-none"></div>
+          <div className="absolute bottom-[-5%] left-[-2%] text-[8rem] md:text-[15rem] font-black text-white/[0.03] pointer-events-none select-none italic tracking-tighter leading-none hidden md:block uppercase">
+            TTCO Tech
           </div>
         </div>
       </div>
