@@ -15,7 +15,7 @@ function ProjectsPage() {
         title="Dự án thực tế"
         subtitle="Chiêm ngưỡng các giải pháp năng lượng sạch đột phá: từ mái nhà xưởng công nghiệp đến các bề mặt kiến trúc phức tạp."
         breadcrumb="Dự án"
-        bgImage="public/prj-7.avif" 
+        bgImage="prj-7.avif" 
       />
 
       {/* 2. Phần lọc & Thống kê nhanh (Project Stats Bar) */}
@@ -90,7 +90,7 @@ function ProjectsPage() {
       <section className="bg-white py-20 border-t border-zinc-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="inline-block p-4 bg-emerald-50 rounded-3xl mb-8">
-             <img src="public/logo-TTC.jpg" alt="Certified" className="h-12 w-auto opacity-80" />
+             <img src="logo-TTC.jpg" alt="Certified" className="h-12 w-auto opacity-80" />
           </div>
           <h3 className="text-2xl md:text-4xl font-black text-zinc-900 uppercase mb-6 tracking-tight">
             Bạn muốn tham quan dự án thực tế?

@@ -9,7 +9,7 @@ export default function SolarHero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-50/50 via-transparent to-transparent"></div>
         <img
-          src="public/solar-5.png" // Ảnh pattern dạng tế bào quang điện hoặc lưới điện xanh
+          src="solar-5.png" // Ảnh pattern dạng tế bào quang điện hoặc lưới điện xanh
           alt="Zonprosolar Tech Foundation"
           className="w-full h-full object-cover opacity-[0.5] mix-blend-overlay"
         />
@@ -75,7 +75,7 @@ export default function SolarHero() {
         <div className="order-1 lg:order-2 relative px-4 md:px-0">
           <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border-[8px] border-white group">
             <img
-              src="public/solar-7.jpg" // Nên dùng ảnh pin đang uốn cong hoặc dán trên mái tôn
+              src="solar-7.jpg" // Nên dùng ảnh pin đang uốn cong hoặc dán trên mái tôn
               alt="Zonprosolar Flexible Panel"
               className="w-full object-cover aspect-[4/3] md:aspect-[4/5] group-hover:scale-105 transition-transform duration-1000"
             />

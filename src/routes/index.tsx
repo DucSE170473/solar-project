@@ -64,7 +64,7 @@ function HomePage() {
             
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-b-[12px] border-emerald-600 transition-all duration-1000 group-hover:-translate-y-4">
               <img
-                src="public/nen-1.jpg" 
+                src="nen-1.jpg" 
                 alt="Zonpro Solar Technology"
                 className="w-full h-full object-cover aspect-[4/3] md:aspect-square group-hover:scale-110 transition-transform duration-[2s]"
               />

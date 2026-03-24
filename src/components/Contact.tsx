@@ -35,7 +35,7 @@ export default function SolarContact() {
                     {/* Background Pattern Năng lượng */}
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
-                            src="public/solar-3.jpg" // Thay bằng ảnh cánh đồng pin mặt trời
+                            src="solar-3.jpg" // Thay bằng ảnh cánh đồng pin mặt trời
                             alt="Zonprosolar Energy"
                             className="w-full h-full object-cover mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[3s]"
                         />

@@ -13,7 +13,7 @@ export default function SolarAbout() {
           {/* Ảnh 1: Tấm pin dẻo đang được uốn cong hoặc dán lên bề mặt thực tế */}
           <div className="relative z-10 w-full md:w-4/5 aspect-[4/3] md:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
             <img 
-              src="public/solar-6.jpg" 
+              src="solar-6.jpg" 
               alt="Công nghệ pin mặt trời dẻo Zonpro" 
               className="w-full h-full object-cover"
             />
@@ -24,7 +24,7 @@ export default function SolarAbout() {
           {/* Ảnh 2: Một dự án thực tế (ví dụ lắp trên mái nhà xưởng hoặc xe RV) */}
           <div className="absolute -bottom-6 -right-2 md:-bottom-10 md:-right-4 z-20 w-1/2 md:w-3/5 aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
             <img 
-              src="public/solar-1.jpg" 
+              src="solar-1.jpg" 
               alt="Ứng dụng pin mặt trời TTCO" 
               className="w-full h-full object-cover"
             />

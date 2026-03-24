@@ -39,7 +39,7 @@ export default function SolarHeader() {
         <Link to="/" className="flex items-center gap-2 md:gap-4 no-underline group z-[110]">
           <div className={`transition-all duration-500 p-1.5 rounded-xl ${scrolled ? 'bg-emerald-600' : 'bg-white'}`}>
             <img
-              src="public/logo-TTC.jpg" // Icon hoặc Logo thu nhỏ
+              src="logo-TTC.jpg" 
               alt="Zonprosolar"
               className="h-8 md:h-10 w-auto object-contain"
             />

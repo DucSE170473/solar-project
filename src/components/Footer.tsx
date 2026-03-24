@@ -17,7 +17,7 @@ export default function SolarFooter() {
               {/* Logo Zonpro/TTCO */}
               <div className="h-10 md:h-12 w-fit">
                 <img
-                  src="public/logo-TTC.jpg" // Thay bằng logo Zonpro/TTCO
+                  src="logo-TTC.jpg" // Thay bằng logo Zonpro/TTCO
                   alt="Zonprosolar Logo"
                   className="h-full w-auto object-contain"
                 />

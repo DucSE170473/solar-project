@@ -14,7 +14,7 @@ export default function SolarCTA() {
           <div className="absolute inset-0 z-0">
             {!imgError ? (
               <img
-                src="public/solar-4.jpg" // Nên dùng ảnh một mái nhà xưởng phủ kín pin dẻo Zonpro
+                src="solar-4.jpg" // Nên dùng ảnh một mái nhà xưởng phủ kín pin dẻo Zonpro
                 alt="Zonprosolar Green Project"
                 onError={() => setImgError(true)}
                 className="w-full h-full object-cover opacity-30 mix-blend-overlay scale-105 group-hover:scale-110 transition-transform duration-[3000ms]"

@@ -6,28 +6,28 @@ const solarServices = [
     title: "Tư vấn Giải pháp",
     icon: <Sun size={32} />,
     desc: "Khảo sát và tính toán hiệu năng dựa trên công nghệ pin bán dẫn siêu nhẹ, tối ưu hóa diện tích lắp đặt cho mọi loại mái.",
-    bgImg: "public/sv-1.avif",
+    bgImg: "sv-1.avif",
     accent: "text-emerald-600 bg-emerald-50"
   },
   {
     title: "Cung ứng Pin Bán Dẫn",
     icon: <Zap size={32} />,
     desc: "Phân phối tấm pin Zonpro ZP-DB7A (200W/225W) siêu dẻo, trọng lượng chỉ 8.1kg, không cần khung đỡ cồng kềnh.",
-    bgImg: "public/sv-2.png",
+    bgImg: "sv-2.png",
     accent: "text-amber-500 bg-amber-50"
   },
   {
     title: "Lắp đặt Siêu Tốc",
     icon: <Rocket size={32} />,
     desc: "Quy trình dán/treo trực tiếp không xuyên thấu mái tôn, giúp thi công nhanh gấp 3 lần so với pin truyền thống.",
-    bgImg: "public/sv-3.jpg",
+    bgImg: "sv-3.jpg",
     accent: "text-emerald-800 bg-emerald-50"
   },
   {
     title: "Bảo trì & Hiệu suất",
     icon: <ShieldCheck size={32} />,
     desc: "Hệ thống giám sát thông minh giúp theo dõi sản lượng điện 24/7 và dịch vụ bảo trì định kỳ cam kết hiệu suất bền bỉ.",
-    bgImg: "public/sv-4.jpg",
+    bgImg: "sv-4.jpg",
     accent: "text-zinc-700 bg-zinc-100"
   },
 ]

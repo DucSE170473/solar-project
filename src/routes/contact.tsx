@@ -15,7 +15,7 @@ function ContactPage() {
         title="Liên hệ tư vấn"
         subtitle="Đội ngũ kỹ sư của TTCO sẵn sàng hỗ trợ giải đáp mọi thắc mắc về công nghệ pin bán dẫn siêu nhẹ 2025."
         breadcrumb="Liên hệ"
-        bgImage="public/ct-1.jpg" 
+        bgImage="ct-1.jpg" 
       />
 
       {/* 2. Khối thông tin kết nối nhanh (Quick Connect) */}

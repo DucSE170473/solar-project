@@ -7,7 +7,7 @@ const projectData = [
     name: 'Hệ Thống Điện Mặt Trời Mái Nhà Xưởng Mỏng',
     type: 'Mái tôn công nghiệp',
     location: 'KCN Tân Bình, TP. HCM',
-    img: 'public/prj-1.jpg',
+    img: 'prj-1.jpg',
     capacity: '500 kWp',
     feature: 'Không khoan đục mái'
   },
@@ -16,7 +16,7 @@ const projectData = [
     name: 'Ứng Dụng Pin Dẻo Trên Bề Mặt Mái Vòm Cong',
     type: 'Bề mặt cong phức tạp',
     location: 'Trung tâm Triển lãm, Đà Nẵng',
-    img: 'public/prj-2.jpg',
+    img: 'prj-2.jpg',
     capacity: '150 kWp',
     feature: 'Uốn cong 30 độ'
   },
@@ -25,7 +25,7 @@ const projectData = [
     name: 'Giải Pháp Năng Lượng Cho Xe RV & Du Thuyền',
     type: 'Giao thông vận tải',
     location: 'Cảng du thuyền Tuần Châu',
-    img: 'public/prj-3.jpg',
+    img: 'prj-3.jpg',
     capacity: '2 kWp',
     feature: 'Siêu nhẹ 8.1kg'
   },
@@ -34,7 +34,7 @@ const projectData = [
     name: 'Lắp Đặt Pin Mặt Trời Trên Mái Ngói Dân Dụng',
     type: 'Mái ngói & Biệt thự',
     location: 'Khu biệt thự Vinhome, Hà Nội',
-    img: 'public/prj-4.webp',
+    img: 'prj-4.webp',
     capacity: '15 kWp',
     feature: 'Thẩm mỹ cao'
   },
@@ -43,7 +43,7 @@ const projectData = [
     name: 'Hệ Thống Điện Mặt Trời Cho Trạm Sạc Xe Điện',
     type: 'Tiện ích công cộng',
     location: 'Quận 2, TP. HCM',
-    img: 'public/prj-5.png',
+    img: 'prj-5.png',
     capacity: '50 kWp',
     feature: 'Tích hợp thông minh'
   },
@@ -52,7 +52,7 @@ const projectData = [
     name: 'Dự Án Pin Mặt Trời Tích Hợp Mặt Dựng Tòa Nhà',
     type: 'Bề mặt cong phức tạp',
     location: 'Tòa nhà Văn phòng, Bình Dương',
-    img: 'public/prj-6.webp',
+    img: 'prj-6.webp',
     capacity: '80 kWp',
     feature: 'Chống nóng & Phát điện'
   },
