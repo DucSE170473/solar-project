@@ -120,11 +120,12 @@ export default function SolarServices() {
         {/* Khối CTA Kỹ thuật - Cập nhật Pin Bán Dẫn */}
         <div className="mt-16 md:mt-24 relative rounded-[3rem] overflow-hidden shadow-2xl group bg-emerald-950">
           <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-          
-          <div className="relative z-10 p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+          <div className="relative z-10 p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Vế trái: Nội dung sản phẩm */}
             <div className="max-w-2xl text-center lg:text-left space-y-6">
               <span className="bg-emerald-500 text-white px-5 py-1.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] inline-block shadow-lg">
-                Sản phẩm đột phá 2025
+                Sản phẩm đột phá 2026
               </span>
               <div className="space-y-3">
                 <h4 className="text-3xl md:text-6xl font-black text-white leading-none uppercase tracking-tighter">
@@ -132,22 +133,52 @@ export default function SolarServices() {
                   <span className="text-emerald-400 italic">Bán dẫn siêu nhẹ</span>
                 </h4>
               </div>
-              <p className="text-emerald-100/70 font-medium text-sm md:text-lg max-w-lg leading-relaxed">
+              <p className="text-emerald-100/70 font-medium text-sm md:text-lg max-w-lg leading-relaxed mx-auto lg:mx-0">
                 Chỉ 8.1kg/tấm – Dẻo dai – Không khoan mái. Giải pháp hoàn hảo cho mái tôn nhà xưởng cũ và kết cấu yếu.
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 w-full lg:w-auto">
-                <a
+            {/* Vế phải: Hệ thống Hotline thông minh */}
+            <div className="flex flex-col gap-6 w-full lg:w-[400px]">
+              {/* Nút Hotline Chính */}
+              <a
                 href="tel:0792515151"
-                className="bg-white hover:bg-emerald-400 text-emerald-950 hover:text-white px-10 py-6 rounded-3xl font-black text-sm uppercase tracking-widest transition-all duration-500 flex items-center justify-center gap-4 shadow-xl hover:-translate-y-2 active:scale-95 group/btn"
-                >
-                Hotline: 0792.51.51.51
+                className="bg-white hover:bg-emerald-400 text-emerald-950 hover:text-white px-10 py-6 rounded-3xl font-black text-sm md:text-base uppercase tracking-widest transition-all duration-500 flex items-center justify-center gap-4 shadow-xl hover:-translate-y-2 active:scale-95 group/btn"
+              >
+                Tổng đài: 0792.51.51.51
                 <div className="bg-emerald-600 p-2 rounded-full group-hover/btn:bg-white group-hover/btn:text-emerald-600 transition-colors">
-                    <Zap size={18} fill="currentColor" />
+                  <Zap size={18} fill="currentColor" className="animate-pulse" />
                 </div>
-                </a>
-                <p className="text-emerald-400/50 text-[10px] font-bold text-center uppercase tracking-widest">Hỗ trợ kỹ thuật 24/7</p>
+              </a>
+
+              {/* Lưới các số hỗ trợ phụ */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { label: "Kỹ thuật", tel: "0946.234.114", val: "0946234114" },
+                  { label: "Lãnh đạo", tel: "0908.528.525", val: "0908528525", highlight: true },
+                  { label: "VP 01", tel: "028.62.996.669", val: "02862996669" },
+                  { label: "VP 02", tel: "028.665.666.64", val: "02866566664" },
+                  { label: "VP 03", tel: "028.628.164.34", val: "02862816434" },
+                ].map((item, idx) => (
+                  <a
+                    key={idx}
+                    href={`tel:${item.val}`}
+                    className={`flex flex-col p-3 rounded-2xl border transition-all hover:scale-105 ${item.highlight
+                        ? 'bg-emerald-500/10 border-emerald-500/50 hover:bg-emerald-500'
+                        : 'bg-white/5 border-white/10 hover:bg-white/10'
+                      } group/item`}
+                  >
+                    <span className={`text-[8px] font-black uppercase tracking-tighter mb-1 ${item.highlight ? 'text-emerald-400 group-hover/item:text-white' : 'text-emerald-500/50'}`}>
+                      {item.label}
+                    </span>
+                    <span className={`text-[11px] font-bold tracking-wider ${item.highlight ? 'text-white' : 'text-emerald-100'}`}>
+                      {item.tel}
+                    </span>
+                  </a>
+                ))}
+              </div>
+
+              <p className="text-emerald-400/30 text-[9px] font-bold text-center uppercase tracking-[0.3em]">Hỗ trợ kỹ thuật & Khảo sát 24/7</p>
             </div>
           </div>
         </div>
