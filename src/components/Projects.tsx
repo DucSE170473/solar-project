@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { MapPin, Zap, Maximize2 } from 'lucide-react'
+import { MapPin, Zap, Maximize2, Plus, Lock } from 'lucide-react' // Thêm icon
+import { useAuth } from '../hooks/useAuth' 
 
 const projectData = [
   {
@@ -60,8 +61,11 @@ const projectData = [
 
 export function SolarProjects() {
   const [filter, setFilter] = useState('Tất cả')
+  const { user, role } = useAuth() // Lấy thông tin user và role từ Context
 
-  // Danh mục mới tập trung vào khả năng ứng dụng đa dạng của pin dẻo
+  // Kiểm tra quyền: admin và marketing được phép chỉnh sửa
+  const canEdit = user && (role === 'admin' || role === 'marketing')
+
   const categories = ['Tất cả', 'Mái tôn công nghiệp', 'Bề mặt cong phức tạp', 'Mái ngói & Biệt thự', 'Giao thông vận tải']
 
   const filtered = filter === 'Tất cả'
@@ -72,10 +76,12 @@ export function SolarProjects() {
     <div className="bg-white py-12 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
 
-        {/* Header Section - Chuyển sang phong cách Tech & Green */}
+        {/* Header Section */}
         <div className="mb-10 md:mb-16 flex flex-col items-start justify-between gap-6 md:gap-8 border-l-4 border-emerald-500 pl-4 md:pl-6 md:flex-row md:items-end">
           <div className="space-y-1 md:space-y-2">
-            <span className="text-emerald-600 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Ứng dụng thực tế</span>
+            <span className="text-emerald-600 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">
+              {user ? `Xin chào, ${user.displayName}` : 'Ứng dụng thực tế'}
+            </span>
             <h2 className="text-4xl md:text-7xl lg:text-8xl font-black leading-tight md:leading-[0.85] tracking-tighter uppercase text-slate-900">
               <span className="block text-lg md:text-2xl lg:text-3xl font-light tracking-[0.2em] text-slate-400 mb-1 italic">
                 Pin mặt trời ở mọi nơi
@@ -84,21 +90,30 @@ export function SolarProjects() {
             </h2>
           </div>
 
-          {/* Filter - Sử dụng tông màu Emerald */}
-          <div className="flex w-full overflow-x-auto pb-4 no-scrollbar md:w-auto md:flex-wrap md:pb-0 gap-2 scroll-smooth">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`whitespace-nowrap rounded-xl px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all duration-300 shrink-0 ${
-                  filter === cat
-                  ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200 scale-105'
-                  : 'bg-slate-50 text-slate-500 hover:bg-emerald-50 border border-slate-100'
-                }`}
-              >
-                {cat}
+          <div className="flex flex-col gap-4 items-end">
+             {/* NÚT THÊM DỰ ÁN: Chỉ hiển thị cho Admin/Marketing */}
+             {canEdit && (
+              <button className="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-emerald-600 transition-all shadow-xl">
+                <Plus size={16} /> Thêm dự án mới
               </button>
-            ))}
+            )}
+
+            {/* Filter */}
+            <div className="flex w-full overflow-x-auto pb-4 no-scrollbar md:w-auto md:flex-wrap md:pb-0 gap-2 scroll-smooth">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setFilter(cat)}
+                  className={`whitespace-nowrap rounded-xl px-5 py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all duration-300 shrink-0 ${
+                    filter === cat
+                    ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200 scale-105'
+                    : 'bg-slate-50 text-slate-500 hover:bg-emerald-50 border border-slate-100'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -107,8 +122,16 @@ export function SolarProjects() {
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="group flex flex-col overflow-hidden rounded-[2.5rem] bg-slate-50 hover:bg-white shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100"
+              className="group flex flex-col overflow-hidden rounded-[2.5rem] bg-slate-50 hover:bg-white shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 relative"
             >
+              {/* Nút chỉnh sửa nhanh cho Admin (nếu cần) */}
+              {canEdit && (
+                <button className="absolute top-4 right-4 z-10 p-3 bg-white/80 backdrop-blur-md rounded-full shadow-md text-slate-600 hover:text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                   <Lock size={14} className="mb-0.5" />
+                   <span className="text-[8px] font-bold block">EDIT</span>
+                </button>
+              )}
+
               {/* Image Area */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
