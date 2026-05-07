@@ -41,6 +41,7 @@ export default function SolarHeader() {
     { to: "/", label: "Trang chủ" },
     { to: "/about", label: "Công nghệ" },
     { to: "/projects", label: "Dự án" },
+    { to: "/products", label: "Sản phẩm" },
     { to: "/contact", label: "Liên hệ" },
   ]
 
